@@ -1,0 +1,48 @@
+/* 
+    Planned design sections:
+    - General - html, body, gradient, background color, ligt position
+    - Header text - glowing in a frame
+    - Paragraph text - protruded with gloss
+    - Button (Checkbox)
+    - Floating button - Shadow, border, slight gloss
+    - Link - glowing if clicked, inactive if visited
+    - Input field - inset
+    - Image - Crop in extrusion
+ */
+ @import url("Values.css");
+ @import url("Button.css");
+ @import url("Hover-Button.css");
+ @import url("Display.css");
+ @import url("NeuBox.css");
+ @import url("Link.css");
+
+
+html {
+    font-family: monospace;
+    color: var(--text-col);
+    height: 100%;
+}
+
+body{
+    /* background-image: linear-gradient(135deg, var(--bg-from), var(--bg-to)); */
+    background-color: var(--bg);
+    background-attachment: fixed;
+    position: relative;
+    margin: 0;
+}
+
+
+.center-item {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+
+}
+
+
+.inset-box{
+    background-image: linear-gradient(to bottom right, rgb(100, 100, 100, 0.05) , rgb(0, 0, 0, 0.05));
+    border-radius: 10px;
+}
+

@@ -1,0 +1,44 @@
+
+.neu-button {
+    width: 50px;
+    height: 50px;
+    appearance: none;
+
+    border-radius: 50%;
+    background-color: var(--bg);
+    /* background-image: radial-gradient(at 20% 20%, var(--bg-from) 10px, transparent); */
+
+    box-shadow: 3px 3px 5px var(--shadow),
+        -3px -3px 5px var(--highlight);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 30px;
+}
+
+.neu-button:after {
+    color: var(--text-col);
+    font-family: FontAwesome;
+    content: '\f00c';
+}
+
+.neu-button:hover {
+    background-image: radial-gradient(at 20% 20%, var(--bg-from) 10px, transparent);
+
+    /* background-color: var(--bg-from); */
+}
+
+.neu-button:checked{
+    border: 3px var(--bg) solid;
+
+    box-shadow: 3px 3px 5px var(--shadow),
+        -3px -3px 5px var(--highlight),
+        2px 2px 5px rgb(0, 0, 0, 0.1) inset,
+        -2px -2px 5px rgb(255, 255, 255, 0.1) inset;
+}
+
+.neu-button:checked::after{
+    color: var(--text-highlight);
+    text-shadow: 0 0 2px var(--text-highlight);
+}

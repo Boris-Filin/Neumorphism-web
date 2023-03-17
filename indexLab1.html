@@ -1,0 +1,28 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="Styles/style.css">
+        <title>Placeholder title</title>
+    </head>
+    <body>
+        <h1>Hi, I am a Placeholder Website!</h1>
+
+        <button id="redirect1"><h3>Another Web Page</h3></button>
+        <script>
+            document.getElementById("redirect1").onclick = function(){
+                location.href = "NewHTMLfile.html"
+            };
+        </script>
+    </body>
+</html>
+
+<!-- 
+    Upload to partch command (for self):
+    scp -r * u7637604@partch.anu.edu.au:/webusers/u7637604/public_html
+ -->
+
+<!-- 
+    Citation:
+    The button script was adopted from 
+    https://stackoverflow.com/questions/16562577/how-can-i-make-a-button-redirect-my-page-to-another-page.
+    I re-wrote it myself to better understand how it works.
+ -->

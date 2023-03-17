@@ -1,0 +1,35 @@
+a.neu-link:link {
+
+    background-color: var(--bg-to);
+
+    border: 3px var(--bg) solid;
+    border-radius: 10px;
+
+    box-shadow: 3px 3px 5px var(--shadow),
+        -3px -3px 5px var(--highlight);
+    padding: 10px;
+    
+    color: var(--text-col);
+
+    text-decoration: none;
+    font-size: 20px;
+}
+
+a.neu-link:visited{
+    background-color: var(--bg);
+    color: rgb(160, 160, 160);
+    border: 3px var(--bg) solid;
+
+}
+
+
+a.neu-link:active{
+    border: 3px var(--bg) solid;
+
+    box-shadow: 2px 2px 3px var(--shadow),
+        -2px -2px 3px var(--highlight),
+        2px 2px 5px rgb(0, 0, 0, 0.1) inset,
+        -2px -2px 5px var(--highlight) inset;
+    
+    color: black;
+}

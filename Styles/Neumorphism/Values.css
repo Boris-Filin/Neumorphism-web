@@ -1,0 +1,38 @@
+:root {
+    /* Light mode */
+    --bg-r: 237;
+    --bg-g: 235;
+    --bg-b: 238;
+
+    /* Dark mode */
+    /* --bg-r: 40;
+    --bg-g: 40;
+    --bg-b: 40; */
+    --bg: rgb(var(--bg-r), var(--bg-g), var(--bg-b));
+
+    --bg-from: rgb(calc(var(--bg-r) + 10),
+        calc(var(--bg-g) + 10),
+        calc(var(--bg-b) + 10));
+
+    --bg-to: rgb(calc(var(--bg-r) - 10),
+        calc(var(--bg-g) - 10),
+        calc(var(--bg-b) - 10));
+
+    --bg-tinted: rgb(calc(var(--bg-r) - 20),
+        calc(var(--bg-g) - 20),
+        calc(var(--bg-b) - 20));
+
+    /* --accessibility: yellow; */
+    --accessibility: transparent;
+
+    /* Light mode */
+    --shadow: rgb(0, 0, 0, 0.3);
+    --highlight: rgb(255, 255, 255, 1);
+
+    /* Dark mode */
+    /* --shadow: rgb(0, 0, 0, 0.7);
+    --highlight: rgb(255, 255, 255, 0.2); */
+
+    --text-col: rgb(75, 75, 75);
+    --text-highlight: black;
+}
