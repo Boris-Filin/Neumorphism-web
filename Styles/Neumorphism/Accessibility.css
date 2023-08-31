@@ -1,0 +1,31 @@
+
+html {
+    font-size: x-large;
+}
+
+/* Accessibility outline for text paragraphs */
+.outset-box::after {
+    /* By default, the color variables are transparent,
+    so it is not visible. When the Accessibility Mode
+    button is on, they change to the values set by
+    the color scheme to create a high-contrast border. */
+    border: 2px var(--access-main) solid;
+    box-shadow: 0 0 5px -1px var(--access),
+        0 0 5px -1px var(--access) inset;
+    border-radius: 5px;
+    position: absolute;
+    /* This creates some space between the outline and the border of the main div */
+    top: 5px; right: 5px; bottom: 5px; left: 5px;
+
+    /* Without content, the ::after elements are not displayed */
+    content: "";
+
+    /* This line allows the user to select text and click links on the main div,
+    even though technically this one should be an obstacle. */
+    pointer-events: none;
+}
+
+.outset-line {
+    background-color: var(--access-main);
+    box-shadow: 0 0 10px var(--access);
+}

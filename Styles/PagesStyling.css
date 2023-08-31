@@ -1,0 +1,234 @@
+/* 
+This page will not be commented.
+It is used to style individual elements 
+on the website and give them specific property values.
+Most of the rules are just generic margins/positions/colors.
+*/
+
+
+
+
+.buttons {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+
+#header {
+    margin: 20px;
+    text-align: center;
+    font-weight: normal;
+    font-size: 40px;
+    color: white;
+    text-shadow: 0 0 3px white;
+}
+
+#header-box {
+    margin: 50px 0;
+    /* position: relative; */
+}
+
+.double-element {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+#main-feedback {
+    width: 80%;
+    max-width: 600px;
+}
+
+#form-btn-1, #form-btn-2 {
+    width: 100px;
+    height: 30px;
+    background-color: rgb(0, 0, 0, 0.2);
+    border: 0;
+    border-radius: 15px;
+    color: var(--text-col);
+    font-weight: bold;
+}
+
+#form-btn-1:hover, #form-btn-2:hover {
+    background-color: rgb(0, 0, 0, 0.1);
+}
+
+
+#form-btn-1:active, #form-btn-2:active {
+    /* background-color: var(--bg);
+    border: 2px var(--shadow) solid; */
+    background-color: var(--shadow);
+    /* color: var(--highlight) */
+}
+
+.display-buttons {
+    display: flex;
+    flex-direction: column;
+    align-items: space-around;
+    justify-content: center;
+    gap: 30px;
+}
+
+.display-buttons-row {
+    display: flex;
+    flex-direction: row;
+    /* width: 150px; */
+    gap: 30px;
+    padding: 0 30px 0 0;
+}
+
+#display-btn-1 + i, #end-btn-1 + i {
+    --text-glow: rgb(255, 50, 50);
+    --text-shadow: rgb(255, 50, 50);
+}
+
+#display-btn-2 + i, #end-btn-2 + i {
+    --text-glow: orange;
+    --text-shadow: rgb(255, 200, 50);
+}
+
+
+#display-btn-3 + i {
+    --text-glow: rgb(50, 230, 50);
+    --text-shadow: rgb(100, 255, 100);
+}
+
+#display-btn-4 + i {
+    --text-glow: rgb(230, 230, 0);
+    --text-shadow: rgb(255, 255, 0);
+}
+
+#display-btn-5 + i {
+    --text-glow: pink;
+    --text-shadow: pink;
+}
+
+#display-btn-6 + i {
+    --text-glow: white;
+    --text-shadow: aqua;
+}
+
+.image-preview {
+    width: 100px;
+    height: 100px;
+
+    object-fit: cover;
+    overflow: hidden;
+    border-radius: 5px;
+}
+
+#source-table {
+    margin: 10px;
+    border-spacing: 5px;
+    /* border-collapse: collapse; */
+}
+
+#source-table td:not(.image-cell) {
+    /* border: 1px grey solid; */
+    padding: 5px;
+}
+
+#youtube-btn + i {
+    --text-glow: rgb(255, 50, 50);
+    --text-shadow: rgb(255,255,255, 0.5);
+}
+
+#twitter-btn + i {
+    --text-glow: rgb(50, 200, 255);
+    --text-shadow: rgb(255,255,255, 0.5);
+}
+
+#instagram-btn + i {
+    --text-glow: magenta;
+    --text-shadow: rgb(255,255,255, 0.5);
+}
+
+/* .crt-post {
+    border-radius: 1em;
+    box-shadow: 3px 3px 5px var(--shadow),
+        -3px -3px 5px var(--highlight),
+        -3px -3px 5px var(--highlight);
+    border: 0;
+    outline:0;
+}
+
+.crt-feed > div > .crt-post {
+    background-color: transparent;
+    margin: 40px 0;
+}
+
+.crt-feed > div > .crt-post > .crt-post-c {
+    border: 0;
+}
+
+.crt-feed > div {
+    padding: 10px;
+}
+
+.crt-image {
+    border-radius: 10px;
+}
+
+.crt-post-border {
+    background-color: transparent;
+    margin: 5px;
+}
+
+.crt-feed > div > .crt-post > .crt-post-c > .crt-post-footer {
+    background-color: transparent;
+}
+
+.crt-feed-scroll > .crt-load-more-container > button {
+    background-color: var(--bg);
+    border-radius: 10px;
+    border: 5px var(--bg) solid;
+    box-shadow: 3px 3px 5px var(--shadow),
+        -3px -3px 5px var(--highlight);
+}
+
+.crt-feed-scroll > .crt-load-more-container > button:active {
+    box-shadow: 3px 3px 5px var(--shadow),
+        -3px -3px 5px var(--highlight),
+        2px 2px 5px rgb(0, 0, 0, 0.1) inset,
+        -2px -2px 5px rgb(255, 255, 255, 0.1) inset;   
+}
+
+.crt-feed > div > .crt-post > .crt-post-c > .crt-post-header > .crt-post-fullname > a {
+    color: black;
+} */
+
+#curator-feed-default-feed-layout {
+    background-color: white;
+    border: 5px var(--bg) solid;
+    width: 60%;
+    height: 700px;
+}
+
+#curator-feed-default-feed-layout::after {
+    box-shadow: 0 0 50px white;
+}
+
+.share-list {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    gap: 20px;
+    flex-wrap: wrap;
+    transform: scale(2);
+    margin: 10px 0;
+    /* box-sizing: border-box; */
+    width: fit-content;
+}
+
+.twitter-share-button {
+    color: white;
+    font-family: Arial;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: small;
+    background-color: rgb(29 161 242);
+    box-sizing: border-box;
+    padding: 3px;
+    border-radius: 3px;
+}

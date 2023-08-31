@@ -1,0 +1,34 @@
+:root {
+    --bg-r: 228;
+    --bg-g: 243;
+    --bg-b: 255;
+
+    --shadow: rgb(0, 0, 0, 0.3);
+    /* --highlight: rgb(255, 218, 175); */
+    --highlight: rgb(255,255,255, 1);
+
+
+    --text-col: grey;
+    --text-highlight: black;
+    
+    --bg: rgb(var(--bg-r), var(--bg-g), var(--bg-b));
+
+    --bg-from: rgb(calc(var(--bg-r) + 10),
+        calc(var(--bg-g) + 10),
+        calc(var(--bg-b) + 10));
+
+    --bg-to: rgb(calc(var(--bg-r) - 10),
+        calc(var(--bg-g) - 10),
+        calc(var(--bg-b) - 10));
+
+    --bg-tinted: rgb(calc(var(--bg-r) - 20),
+        calc(var(--bg-g) - 20),
+        calc(var(--bg-b) - 20));
+
+    --access: rgb(50, 50, 255, 1);
+    --access-main: white;
+}
+
+
+
+/* © Boris Filin 2023 */

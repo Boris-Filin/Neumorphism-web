@@ -1,34 +1,345 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
     <head>
-        <title>
-            Interesting CSS styles
-        </title>
+        <!-- title, styles, icon pack link (font awesome) -->
+        <title>Neumorphism</title>
+        <link rel="stylesheet" href="Styles/Neumorphism/Neumorphism.css">
+        <link rel="stylesheet" href="Styles/PagesStyling.css">
+
+        <script src="https://kit.fontawesome.com/7b1233a124.js" crossorigin="anonymous"></script>
+
+        <meta charset="UTF-8">
+        <meta name="description" content="Neumorphism design">
+        <meta name="keywords" content="CSS, Neumorphism, Design">
+        <meta name="author" content="Boris Filin">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
     </head>
     <body>
-        <h1>Quick And Pretty CSS Styles For When You're out of Ideas</h1>
-        <!-- Introduction, why this page is interesting -->
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+
+
+        <!-- 
+            This is a drop-down nav organised by themes in columns.
+            All of the code is in the DropDownNav.js script.
+            To be continued stands in places where more pages will
+            be added later.
+         -->
+
+        <header class="sticky-header">
+            <nav id="header-nav" class="dropdown-nav">
+
+                <div class="flex-horiz">
+                    <div class="flex-vert justify-start">
+                        <h3>Trivia</h3>
+                        <a href="index.html" class="neu-link">Overview</a>
+                        <a href="appeal.html" class="neu-link">Appeal</a>
+                        <a href="gallery.html" class="neu-link">Gallery</a>
+                        <a href="issues.html" class="neu-link">Problems</a>
+                    </div>
+                    <hr style="margin: 0px">
+                    <div class="flex-vert justify-start">
+                        <h3>Code</h3>
+                        <a href="implementation.html" class="neu-link">Implementation</a>
+                        <a href="library.html" class="neu-link">Library</a>
+                        <a href="documentation.html" class="neu-link">Documentation</a>
+                        <a href="reflection.html" class="neu-link">Reflection</a>
+                    </div>
+                    <hr style="margin: 0px">
+                    <!-- <div class="flex-vert justify-start">
+                        <h3>Connections</h3>
+                    </div> -->
+                    <!-- <hr style="margin: 0px"> -->
+                    <div class="flex-vert justify-start">
+                        <h3>Other</h3>
+                        <a href="feedback.html" class="neu-link">Feedback</a>
+                        <a href="sourcelog.html" class="neu-link">Sourcelog</a>
+                        <a href="sitemap.html" class="neu-link">Sitemap</a>
+                    </div>
+                </div>
+
+                <br>
+                <hr class="outset-line">
+                <br>
+
+                <div class="flex-horiz justify-s-between">
+                    <h2>Neumorphism</h2>
+                    <div class="neu-button-wrapper">
+                        <input type="checkbox" class="neu-button" id="menu-check">
+                        <i class="fa-solid fa-bars"></i>
+                    </div>
+                </div>
+            </nav>
+        </header>
+        <!-- Header is absolute, so we have to artificially
+        move the content down so that it's not obstructed by default -->
+        <div style="height: 120px"></div>
+
+        <!-- I replaced absolute position for accessibility plaque
+        with a flex layout and a counterweight. That way the label
+        stays in the center, and wraps over when the scren is too small. -->
+        <div class="flex-horiz" style="align-items: center;">
+            <div class="outset-box" id="access-mode">
+                <p>Accessibility Mode:</p>
+                <div class="neu-button-wrapper">
+                    <input type="checkbox" class="neu-button" id="access-check">
+                    <i class="fa-solid fa-check"></i>
+                </div>
+            </div>
+
+            <div class="display" id="header-box">
+                <h2 id="header">Neumorphism</h2>
+            </div>
+
+            <div id="access-counterweight"></div>
+        </div>
+
+
+        <!-- Horizontal flex to put buttons and text blocks
+        on the same line.-->
+        <div class="flex-horiz">
+            <div class="outset-box glossy box-flex" id="p-intro">
+                <h2>Are you tired of all websites looking like a carbon copy of each other?</h2>
+                <p><b>Well I have something for you.</b><br>
+                    Look at the buttons to the right. Don't you just want to touch them, feel the
+                    sensation of those slight bevels? If so, you will enjoy Neumorphism.
+                </p>
+                <p>
+                    Modern day websites are often comprised of the same flat minimalistic patterns,
+                    you will be lucky to get anything but a simple shadow on an element.
+                    While their content, layout, and images make them unique, the overall feel
+                    is the same. Basically, every internet page looks like a page of a magazine.
+                    That isn't bad in itself, but sometimes you just want to make something special,
+                    something that doesn't feel like a flat sheet of paper.
+                </p>
+                <p>
+                    That is where 3-dimensional designs shine, and neumorphism is one of them.
+                    It combines gentle shadows and highlights with a calm color palette to create
+                    a style that looks so appealing you can feel the touch even through
+                    a computer screen.
+                </p>
+            </div>
+            <!-- 6 example buttons. They are actually checkboxes so that they
+            stay pressed. -->
+            <div class="display-buttons">
+                <div class="display-buttons-row">
+                    <div class="neu-button-wrapper">
+                        <input type="checkbox" class="neu-button" id="display-btn-1" checked>
+                        <i class="fa-solid fa-heart"></i>
+                    </div>
+                    <div class="neu-button-wrapper">
+                        <input type="checkbox" class="neu-button" id="display-btn-2">
+                        <i class="fa-solid fa-house-chimney"></i>
+                    </div>
+                </div>
+                <div class="display-buttons-row">
+                    <div class="neu-button-wrapper">
+                        <input type="checkbox" class="neu-button" id="display-btn-3" checked>
+                        <i class="fa-solid fa-check"></i>
+                    </div>
+                    <div class="neu-button-wrapper">
+                        <input type="checkbox" class="neu-button" id="display-btn-4" checked>
+                        <i class="fa-solid fa-radiation"></i>
+                    </div>
+                </div>
+                <div class="display-buttons-row">
+                    <div class="neu-button-wrapper">
+                        <input type="checkbox" class="neu-button" id="display-btn-5">
+                        <i class="fa-solid fa-music"></i>
+                    </div>
+                    <div class="neu-button-wrapper">
+                        <input type="checkbox" class="neu-button" id="display-btn-6">
+                        <i class="fa-solid fa-cloud"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Divider line I made, it follows the overall 3D style of the website -->
+        <br>
+        <hr class="outset-line">
+        <br>
+
+
+        <!-- Horizontal flex to put image and text blocks
+        on the same line. Did not use flow because they are in
+        different divs for styling purposes. -->
+        <div class="flex-horiz">
+            <!-- The image is covered with an overlay that blurs it and
+            gives the source link when hovered over. -->
+
+            <!-- <div class="neu-image-display">
+                <img id="overview-img-1" src="Images/NEU-purple-cropped.jpg" style="height: 100%; width:auto" alt="Neumorphism UI example">
+                <p class="image-attribution">
+                    <a href="https://www.freepik.com/free-vector/gradient-ui-ux-elements-collection_17742908.htm#query=neumorphism%20ui&position=0&from_view=search&track=ais">
+                        Image by Freepik</a>
+                </p>
+            </div> -->
+            
+            <div class="outset-box glossy box-flex" id="p-trivia" >
+                <h2>Neumorphism is a relatively unknown style</h2><br>
+                <p>
+                    I tried to dig up as much information as I could, however almost all of the
+                    content related to this style describes the practical implementation rather than
+                    its roots or history. Here is the summary of everything I could find.
+                </p>
+                <p>
+                    Neumorphism, sometimes referred to as Soft UI, is defined by its light colors
+                    and soft design. The latter describes the elements of a Neumorphic page,
+                    that usually seem to blend into the page and
+                    in some cases even dent into it. This makes them stand out from the other
+                    3D designs which are typically built out of elements that seem to be floating
+                    above the rest of the page's content. 
+                </p>
+                <p>
+                    For a bit more information, I recommend checking out
+                    <a href="https://en.wikipedia.org/wiki/Neumorphism" class="text-link">
+                    Neumorphism wiki page</a>,
+                    although you won't really find much.
+                </p>
         
-        <!-- Minimalistic design descritpion, referencing this page -->
-        <h2>Minimalistic design</h2>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-        <!-- Some examples of interactive elements -->
-        <button>Boop</button>
+            </div>
+        </div>
+        <div class="outset-box glossy">
+            <p>
+                Most of the key elements of neumorphic design are attributed to Alexander Plyuto
+                and his concept for a banking app. It is worth noting that the original designs
+                are now being sold by the author as NFTs.
+            </p>
+        </div>
 
-        <!-- Questioning the necessity of CSS -->
-        <h2>Do we even need CSS?</h2>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-        <a href="eyesore.html">Link to a page with no CSS</a>
+        <br>
+        <hr class="outset-line">
+        <br>
 
-        <!-- Leading up to introducing the designs -->
-        <h2>So here are a few designs that looks more agreeable</h2>
-        <!-- Links to all of the design pages -->
-        <ul>
-            <li><a href="neumorphism.html">Neumorphism</a></li>
-            <li><a href="glassmorphism.html">Glassmorphism</a></li>
-            <li><a href="claymorphism.html">Claymorphism</a></li>
-        </ul>        
+        <div class="outset-box glossy" id="p-technique">
+            <h2>But how do we achieve the futuristic look?</h2>
+            <p>
+                The very basis of Neumorphism actually takes just a few CSS rules.
+                The secret to the smooth look of a Neumorphic div is the
+                juxtaposition of its shadow and its highlight
+                on the side that's facing our imagined light source.
+                Note that to create a clearly visible highlight, it has to be brighter than
+                the page, so the latter is dimmed. The page you are looking at right now isn't
+                white, it is grey. But in context that is almost unnoticeable.
+        </div>
+        <div class="flex-horiz">
+            <div class="neu-image-display">
+                <img src="Images/NEU-purple-cropped-2.jpg" style="height: 100%; width:auto;" alt="another Neumorphism example">
+                <p class="image-attribution">
+                    <a href="https://www.freepik.com/free-vector/gradient-ui-ux-elements-collection_17742908.htm#query=neumorphism%20ui&position=0&from_view=search&track=ais">
+                        Image by Freepik</a>
+                </p>
+            </div>
+            <div class="outset-box glossy box-flex">
+                <p>
+                    Thus the basis of the design is established. If you were to implement these changes
+                    and tweak the values to obtain the most natural look, you would have already
+                    gained a sense of what does and doesn't fit the flow of the page. From there
+                    it is only a matter of adding extra classes that match the general aesthetic.
+                    I added buttons that have a slight inset when pressed, dimmed header displays
+                    with glowing text, floating pill-like buttons and much more.
+                </p>
+                <p>
+                    However, the more creative you try to be, the harder it gets to manage the CSS.
+                    That rule is true for any project in general, but with Neumorphism it become
+                    more noticeable. Its uniqeness comes at a price of two big hardships.
+                </p>
+            </div>
+        </div>
+        
+        <br>
+        <hr class="outset-line">
+        <br>
 
+        <div class="flex-horiz" id="p-issues">
+            <div class="outset-box glossy box-flex">
+                <h2>The two glaring problems</h2>
+                <p>
+                    You could not have missed a giant "Accessibility Mode" button plastered right
+                    at the top of the page. The accessibility is indeed a problem more so than usual,
+                    and adding the Accessibility Mode makes the code for each element much heavier,
+                    especially if you want the mode to be toggleable. These are two major concerns
+                    and are a part of the reason the style isn't used more extensively.
+                    They are, however, solvable, and I will explore them and the solution in a separate
+                    section.
+                </p>
+            </div>
+            <div class="neu-image-display" style="height:200px">
+                <img src="Images/accessibility-buttons-cropped.jpg" style="height: 100%; width:auto;" alt="An example of poorly visible Neumorphic buttons">
+                <p class="image-attribution">
+                    <a href="https://www.freepik.com/free-vector/control-buttons-mockup_12569032.htm#query=neumorphism%20ui&position=2&from_view=search&track=ais">
+                        Image by upklyak on Freepik</a>
+                </p>
+            </div>
+        </div>
+
+        <br>
+        <hr class="outset-line">
+        <br>
+
+
+        <div class="flex-horiz">
+            <div class="neu-button-wrapper">
+                <input type="checkbox" class="neu-button" id="end-btn-1">
+                <i class="fa-solid fa-heart"></i>
+            </div>
+
+            <div class="outset-box glossy box-flex">
+                <h2>In conclusion</h2>
+                <p>
+                    Apart from  that, Neumorphism is an awesome style. It is certainly unique
+                    and very satisfying. It could be a great part of your portfolio (or mine, in
+                    this case), or an unusual addition to your webpage. So let us take a look at
+                    how to implement it.
+                </p>
+            </div>
+
+            <div class="neu-button-wrapper">
+                <input type="checkbox" class="neu-button" id="end-btn-2">
+                <i class="fa-regular fa-thumbs-up"></i>
+            </div>
+        </div>
+
+
+        <!-- The link to the next page of the site -->
+        <div class="center-item" style="margin: 50px 0;">
+        <a href="implementation.html" class="neu-link">
+            Implementation
+            <i class="fa-solid fa-arrow-right"></i>
+        </a>
+        </div>
+
+
+        <!-- You guessed it. A copyright footer.
+        The 3 break lines are because of some CSS shenanigans.
+        I had to set footer to fixed to allow it to stretch
+        full page width, so the brs are filling in so that the
+        link above doesn't sink into the footer. -->
+        <footer id="index-footer">
+            <div id="fb-root"></div>
+            <script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_GB/sdk.js#xfbml=1&version=v16.0" nonce="VeTOiwJb"></script>
+            <p>Enjoying your experience so far? Share it with others!</p>
+            <div class="flex-horiz"><div class="share-list">
+                <a class="twitter-share-button"
+                href="https://twitter.com/intent/tweet?text=Check%20out%20this%20Neumorphism%20design%20website!"
+                data-size="large">
+                <i class="fa-brands fa-twitter"></i> Tweet</a>
+    
+                <script src="https://platform.linkedin.com/in.js">
+                // lang: en_US
+                </script>
+                <script type="IN/Share" data-url="https://www.linkedin.com" data-size="large"></script>
+    
+                
+                <div class="fb-share-button" data-href="https://developers.facebook.com/docs/plugins/" data-layout="button"><a target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fdevelopers.facebook.com%2Fdocs%2Fplugins%2F&amp;src=sdkpreparse" class="fb-xfbml-parse-ignore">Share</a></div>
+            </div></div>
+            <p>Copyright Boris Filin 2023</p>
+        </footer>
+
+
+        <script src="Scripts/DropDownNav.js"></script>
+
+        <!-- Accessibility mode enabler/storer script. -->
+        <script src="Scripts/Accessibility.js"></script>
     </body>
 </html>

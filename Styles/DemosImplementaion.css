@@ -1,0 +1,62 @@
+
+#demo-1, #demo-2, #demo-3 {
+    text-align: center;
+    background-color: rgb(235, 235, 235);
+    color: rgb(30, 30, 30);
+
+    box-shadow: 3px 3px 5px var(--shadow),
+        -3px -3px 5px var(--highlight),
+        -3px -3px 5px var(--highlight),
+        3px 3px 5px rgb(0, 0, 0, 0.5) inset,
+        -3px -3px 5px white inset;
+
+    font-family: monospace;
+    font-size: large;
+    letter-spacing: normal;
+
+}
+
+#demo-2 > div {
+    padding: 15px;
+    border-radius: 5px;
+    min-width: none;
+    box-shadow: 3px 3px 5px rgb(0, 0, 0, 0.5),
+        -3px -3px 5px white,
+        -3px -3px 5px white;
+}
+
+#demo-3 > div {
+    padding: 15px;
+    border-radius: 5px;
+    min-width: none;
+    box-shadow: 3px 3px 5px rgb(0, 0, 0, 0.3) inset,
+        -3px -3px 5px white inset,
+        -3px -3px 5px white inset;
+}
+
+#demo-3 > button {
+    border: 3px rgb(235, 235, 235) solid;
+    background-color: rgb(235, 235, 235);
+
+    border-radius: 10px;
+
+    padding: 15px;
+    font-size: large;
+
+    font-family: monospace;
+
+    box-shadow: 2px  2px 4px rgba(0,0,0, 0.5),
+        -2px -2px 4px white,
+        -2px -2px 4px white;
+}
+
+#demo-3 > button:active {
+    box-shadow: 2px  2px 4px rgba(0,0,0, 0.5),
+        -2px -2px 4px white,
+        -2px -2px 4px white,
+        2px  2px 4px rgba(0,0,0, 0.2) inset,
+        -2px -2px 4px white inset,
+        -2px -2px 4px white inset;
+    color: aqua;
+    text-shadow: 0 0 3px rgb(0, 150, 255);
+}

@@ -1,0 +1,18 @@
+/* Just a footer lol */
+
+footer {
+    background-color: transparent;
+    text-align: center;
+    box-shadow: 0 0 10px 2px var(--highlight);
+        /* 0 0 10px 2px var(--highlight); */
+    width: 100%;
+
+    margin: 50px -50px 0px -50px;
+    width: calc(100% + 100px);
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+
+
+/* © Boris Filin 2023 */

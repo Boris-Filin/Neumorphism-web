@@ -1,0 +1,465 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <!-- title, styles, icon pack link (font awesome), color scheme -->
+
+        <title>Neumorphism</title>
+        <link rel="stylesheet" href="Styles/Neumorphism/Neumorphism.css">
+        <link rel="stylesheet" href="Styles/PagesStyling.css">
+        <link rel="stylesheet" href="Styles/DemosImplementaion.css">
+        <link rel="stylesheet" href="Styles/Neumorphism/Themes/Dark.css">
+        <script src="https://kit.fontawesome.com/7b1233a124.js" crossorigin="anonymous"></script>
+
+        <link rel="stylesheet" href="Libraries/highlight/styles/base16/monokai.min.css">
+
+        <!-- This is a script that highlights the code snippets present on the page -->
+        <script src="Libraries/highlight/highlight.min.js"></script>
+        <script>hljs.highlightAll();</script>
+        
+        <meta charset="UTF-8">
+        <meta name="description" content="Neumorphism design">
+        <meta name="keywords" content="CSS, Neumorphism, Design">
+        <meta name="author" content="Boris Filin">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        
+    </head>
+    <body>
+        <header class="sticky-header">
+            <nav id="header-nav" class="dropdown-nav">
+
+                <div class="flex-horiz">
+                    <div class="flex-vert justify-start">
+                        <h3>Trivia</h3>
+                        <a href="index.html" class="neu-link">Overview</a>
+                        <a href="appeal.html" class="neu-link">Appeal</a>
+                        <a href="gallery.html" class="neu-link">Gallery</a>
+                        <a href="issues.html" class="neu-link">Problems</a>
+                    </div>
+                    <hr style="margin: 0px">
+                    <div class="flex-vert justify-start">
+                        <h3>Code</h3>
+                        <a href="implementation.html" class="neu-link">Implementation</a>
+                        <a href="library.html" class="neu-link">Library</a>
+                        <a href="documentation.html" class="neu-link">Documentation</a>
+                        <a href="reflection.html" class="neu-link">Reflection</a>
+                    </div>
+                    <hr style="margin: 0px">
+                    <!-- <div class="flex-vert justify-start">
+                        <h3>Connections</h3>
+                    </div> -->
+                    <!-- <hr style="margin: 0px"> -->
+                    <div class="flex-vert justify-start">
+                        <h3>Other</h3>
+                        <a href="feedback.html" class="neu-link">Feedback</a>
+                        <a href="sourcelog.html" class="neu-link">Sourcelog</a>
+                        <a href="sitemap.html" class="neu-link">Sitemap</a>
+                    </div>
+                </div>
+
+                <br>
+                <hr class="outset-line">
+                <br>
+
+                <div class="flex-horiz justify-s-between">
+                    <h2>Neumorphism</h2>
+                    <div class="neu-button-wrapper">
+                        <input type="checkbox" class="neu-button" id="menu-check">
+                        <i class="fa-solid fa-bars"></i>
+                    </div>
+                </div>
+            </nav>
+        </header>
+        <div style="height: 120px"></div>
+
+
+        <div class="flex-horiz" style="align-items: center;">
+            <div class="outset-box" id="access-mode">
+                <p>Accessibility Mode:</p>
+                <div class="neu-button-wrapper">
+                    <input type="checkbox" class="neu-button" id="access-check">
+                    <i class="fa-solid fa-check"></i>
+                </div>
+            </div>
+
+            <div class="display" id="header-box">
+                <h2 id="header">Implementation</h2>
+            </div>
+
+            <div id="access-counterweight"></div>
+        </div>
+
+
+        <!-- Some buttons around the div just for decoration -->
+        <div class="flex-horiz">
+            <div class="neu-button-wrapper">
+                <input type="checkbox" class="neu-button" id="end-btn-1" checked>
+                <i class="fa-regular fa-exclamation"></i>
+            </div>
+            <div class="outset-box box-flex" style="max-width: 600px;">
+                <h2>Before we begin</h2>
+                <p>
+                    This page explores the details of CSS behind Neumorphism. However, if you wish
+                    to incorporate it into your website without re-writing the entire thing
+                    from scratch, you can simply download a finished library from the
+                    <a href="library.html" class="text-link">
+                        Library Download Page</a>.
+                </p>
+            </div>
+            <div class="neu-button-wrapper">
+                <input type="checkbox" class="neu-button" id="end-btn-2" checked>
+                <i class="fa-regular fa-exclamation"></i>
+            </div>
+        </div>
+
+
+
+        <br>
+        <hr class="outset-line">
+        <br>
+
+
+
+        <div class="flex-horiz" id="p-main">
+            <div class="flex-vert box-flex" style="gap:10px">
+                <div class="outset-box">
+                    <h2>Initial setup</h2>
+                    <p>
+                        As you have probably noticed, everything I mentioned about Neumorphism so far
+                        was regarding the elements on the page. However, before we can get to that there
+                        are some fundamental things that need addressing.
+                    </p>
+                </div>
+        
+                <div class="outset-box">
+                    <h3>1</h3>
+                    <p style="margin: 0;">
+                        <b>Background color.</b>
+                        Typically it has to be very light. However, it is important to remember that for
+                        highlights to be noticeable the background should be slightly dimmer than usual.
+                        For example, 235/255 for a not-quite-white page.
+                    </p>
+                </div>
+                <div class="outset-box">
+                    <h3>2</h3>
+                    <p style="margin: 0;">
+                        <b>Font.</b>
+                        The typical
+                        <span style="font-family: 'Times New Roman';">
+                        Times New Roman</span>
+                        rarely fits any page, let alone a futuristic one. The choice of the font family
+                        is yours. I find that monospace fonts generally look good, because they appear
+                        less dense. Alternatively, increasing the letter spacing by a miniscule amount
+                        prevents clutter.
+                    </p>
+                </div>
+            </div>
+
+
+            <!-- Here comes the code snippet.
+            It is automatically highlighted using the script imported at the beginning;
+            It is also styled as a separate div with 3D edges -->
+            <div>
+                <pre><code class="language-CSS code-display">
+html {
+    background-color: rgb(235, 235, 235);
+    font-family: Rockwell;
+    letter-spacing: 0.5px;
+}
+                </code></pre>
+
+                <!-- A demo that demonstrates the result of the code above.
+                You will encounter one for every following snippet. -->
+                <div id="demo-1" class="inset-display flex-vert" style="margin-top: 20px;">
+                    <p>I am a good-looking text</p>
+                </div>
+            </div>
+        </div>
+
+
+
+
+
+        <br>
+        <hr class="outset-line">
+        <br>
+
+
+        <div class="flex-horiz" id="p-elements">
+            <div class="flex-vert box-flex" style="gap:10px">
+                <div class="outset-box">
+                    <h2>Main elements</h2>
+                    <p>
+                        Finally it is time to move on to the 3D effect that defines the style. Note
+                        that this is an example implementation and yours is almost guaranteed to have
+                        some slight alterations.<br>
+                        An outset element can be defined with just 4 CSS rules.
+                    </p>
+                </div>
+
+                <div class="outset-box">
+                    <h3>1</h3>
+                    <p style="margin: 0;">
+                        <b>Background and Border.</b>
+                        Because the element should look like a part of the page, its background is set
+                        to the color of the page.<br><br>
+                        As for the border, it has to be rounded. Square divs don't fit for various
+                        reasons. It is up to you how big you want the curvature - anything from a few
+                        pixels all the way to 50% (completely round) works. I personally settled for 10px
+                        on normal elements and 50% for some of the buttons.
+                    </p>
+                    <br><a href="https://www.w3schools.com/cssref/pr_background-color.php" class="text-link">
+                        W3Schools on background-color</a>
+                    <br><a href="https://www.w3schools.com/cssref/css3_pr_border-radius.php" class="text-link">
+                        W3Schools on border-radius</a>
+                </div>
+
+                <div class="outset-box">
+                    <h3>2</h3>
+                    <p style="margin: 0;">
+                        <b>Shadow.</b>
+                        A simple shadow for an element. It is created using a suitably named
+                        <a href="https://www.w3schools.com/cssref/css3_pr_box-shadow.php" class="text-link">
+                            box-shadow property</a>,
+                        that creates a shadow with a specified blur, offset,
+                        and color. Just choose where your imaginary light source is,
+                        usually it's top-left, and offset the shadow in the opposite direction.
+                        The exact color of the shadow depends on your choice of color palette. One thing
+                        to note is that it's best to give it a little bit of transparency using rgba
+                        colors.
+                    </p>
+                    <br><a href="https://www.w3schools.com/cssref/css3_pr_box-shadow.php" class="text-link">
+                        W3Schools on box-shadow</a>
+                    <br><a href="https://www.w3schools.com/cssref/func_rgba.php" class="text-link">
+                        W3Schools on RGBA</a>
+                </div>
+
+            </div>
+            <div class="flex-vert box-flex" style="gap:10px">
+                <div class="outset-box">
+                    <h3>3</h3>
+                    <p style="margin: 0;">
+                        <b>Highlight.</b>
+                        Finally, the most important detail - the highlight. It is created using the same
+                        <a href="https://www.w3schools.com/cssref/css3_pr_box-shadow.php" class="text-link">
+                            box-shadow property</a>
+                        as the shadow, despite the name. It should be offset towards
+                        the light, opposite of the shadow, and should have a really bright color. If
+                        the background color you chose is light, the highlight will probably have to be
+                        full-white to be visible. Just play around with the values until it feels right.
+                    </p>
+                    <br><a href="https://www.w3schools.com/cssref/css3_pr_box-shadow.php" class="text-link">
+                        W3Schools on box-shadow</a>
+                    <br><a href="https://www.w3schools.com/cssref/func_rgba.php" class="text-link">
+                        W3Schools on RGBA</a>
+                </div>
+
+
+
+                <pre><code class="language-CSS code-display">
+div {
+    background-color: rgb(235, 235, 235);
+    border-radius: 10px;
+    box-shadow: 2px  2px 4px rgba(0,0,0, 0.5),
+               -2px -2px 4px white;
+}
+                </code></pre>
+
+                <div id="demo-2" class="inset-display flex-vert" style="margin-top: 20px;">
+                    <div> div.</div>
+                </div>
+
+                <div class="outset-box">
+                    <p>
+                        With that we have created the main design of the style. Applying it to
+                        paragraphs, headers, and links will already give you an interesting look. But
+                        there is so much to Neumorphism than a single design!
+                    </p>
+                </div>
+
+            </div>
+        </div>
+
+        
+    
+
+
+        <br>
+        <hr class="outset-line">
+        <br>
+
+
+
+        <div class="flex-horiz" id="p-inset">
+            <div class="flex-vert box-flex" style="gap:10px">
+                <div class="outset-box">
+                    <h2>Buttons and Insets</h2>
+                    <p>
+                        The next step in advancing your design would be to create the opposite of an
+                        outset element - an inset. It would go into the page rather than out of it.
+                        It is really simple to create, but gives way to much more intricate designs.
+                    </p>
+                </div>
+
+                <div class="outset-box">
+                    <h3>1</h3>
+                    <p style="margin: 0;">
+                        <b>Inset Property.</b>
+                        Ironically, the entire inset element can be created from what we already
+                        established by adding just one word to the box-shadows - <i>inset</i>.
+                        By adding it to each of the shadows and also flipping the colors, we get the
+                        desired effect. It is usually added to things such as input boxes or anything
+                        clickable, which we'll see right now.
+                    </p>
+                </div>
+
+                <div class="outset-box">
+                    <h3>2</h3>
+                    <p style="margin: 0;">
+                        <b>Making a button.</b>
+                        A simple button is styled like a regular outset element. Maybe you would want to
+                        make it round, but the box-shadows stay the same. However, when
+                        <a href="https://www.w3schools.com/cssref/sel_active.php" class="text-link">
+                            the button is clicked</a>,
+                        it should become inset. You can either completely inset using the technique
+                        given in the previous paragraph, or you can do something even better - add
+                        a slight inset on an outset button, by combining all of the box-shadow properties
+                        together and adding a thin border.<br>
+                        Finally, add a bit of a glow to the text when the button is pressed. You can use
+                        <a href="https://www.w3schools.com/cssref/css3_pr_text-shadow.php" class="text-link">
+                            text-shadow</a>
+                        for that. Doesn't that just look perfect?
+                    </p>
+                    <br><a href="https://www.w3schools.com/css/css_border.asp" class="text-link">
+                        W3Schools on border</a>
+                    <br><a href="https://www.w3schools.com/cssref/css3_pr_text-shadow.php" class="text-link">
+                        W3Schools on text-shadow</a>
+                </div>
+            </div>
+            <div class="flex-vert" style="gap:10px">
+                <pre><code class="language-CSS code-display"
+>button {
+    border-radius: 10px
+    box-shadow: 2px  2px 4px rgba(0,0,0, 0.3),
+               -2px -2px 4px white;
+}
+
+/* Inset on press */
+button:focus {
+    box-shadow: 2px  2px 4px rgba(0,0,0, 0.5),
+               -2px -2px 4px white,
+                2px  2px 4px rgba(0,0,0, 0.2) inset,
+               -2px -2px 4px white            inset;
+    color: aqua;
+    text-shadow: 0 0 3px rgb(0, 150, 255);
+}
+                </code></pre>
+
+                <div id="demo-3" class="inset-display flex-vert" style="margin-top: 20px;">
+                    <div>inset div.</div>
+                    <Button>button.</Button>
+                </div>
+            </div>
+        </div>
+
+
+
+        <br>
+        <hr class="outset-line">
+        <br>
+
+        <div class="flex-horiz" style="align-items: center; justify-content: space-evenly;" id="p-fin">
+            <div class="outset-box box-flex" style="max-width: 600px;">
+                <!-- Display with Neumorphism text, temporarily -->
+                <h2>What's next</h2>
+                <p>
+                    By now you should get some sort of an intuition of what does and doesn't look
+                    right. So you can create any elements you like - from calendars and clocks
+                    to interactible minigame screens. If you would like to see more examples, visit
+                    <a href="library.html" class="text-link">
+                        Library Download Page</a>.
+                </p>
+            </div>
+            <!-- These are just some random examples of what the style can be applied to.
+            The hover button was originally intended as a fixed position transport-to-top
+            button, but I haven't had the time to put it in, so this is its only appearance
+            for now. -->
+            <button class="hover-button" id="hover-btn-example">
+                <i class="fa-solid fa-question"></i>
+            </button>
+            <a href="https://en.wikipedia.org/wiki/Potato" class="neu-link">
+                A Random Link
+            </a>
+        </div>
+
+
+
+
+        <br>
+        <hr class="outset-line">
+        <br>
+
+        <div class="center-item">
+            <div class="outset-box" style="max-width: 600px;">
+                <h2>More inspiration</h2>
+                <p>
+If you would like to get some more inspiration, there are a lot of tutorials from other people. Here are just some YouTube ones:
+                </p>
+            </div>
+        </div>
+        <br><br>
+        <div class="outset-box" id="curator-feed-default-feed-layout">
+            <a href="https://curator.io" target="_blank" class="crt-logo crt-tag">Powered by Curator.io</a>
+        </div>
+        <!-- The Javascript can be moved to the end of the html page before the </body> tag -->
+        <script>
+    /* curator-feed-default-feed-layout */
+            (function(){
+                var i,e,d=document,s="script";
+                i=d.createElement("script");
+                i.async=1;
+                i.charset="UTF-8";
+                i.src="https://cdn.curator.io/published/1913ec67-54eb-4ee6-8b05-531dfb728035.js";
+                e=d.getElementsByTagName(s)[0];
+                e.parentNode.insertBefore(i, e);
+            })();
+        </script>
+
+        <br>
+        <hr class="outset-line">
+        <br>
+
+        <div class="flex-horiz" style="margin: 50px 100px; gap: 30px">
+            <a href="index.html" class="neu-link">
+                <i class="fa-solid fa-arrow-left"></i>
+                Neumorphism
+            </a>
+            <a href="issues.html" class="neu-link">
+                Biggest Porblems
+                <i class="fa-solid fa-arrow-right"></i>
+            </a>
+        </div>
+
+
+        <footer>
+            <div id="fb-root"></div>
+            <script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_GB/sdk.js#xfbml=1&version=v16.0" nonce="VeTOiwJb"></script>
+            <p>Enjoying your experience so far? Share it with others!</p>
+            <div class="flex-horiz"><div class="share-list">
+                <a class="twitter-share-button"
+                href="https://twitter.com/intent/tweet?text=Check%20out%20this%20Neumorphism%20design%20website!"
+                data-size="large">
+                <i class="fa-brands fa-twitter"></i> Tweet</a>
+    
+                <script src="https://platform.linkedin.com/in.js"></script>
+                <script type="IN/Share" data-url="https://www.linkedin.com" data-size="large"></script>
+    
+                
+                <div class="fb-share-button" data-href="https://developers.facebook.com/docs/plugins/" data-layout="button"><a target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fdevelopers.facebook.com%2Fdocs%2Fplugins%2F&amp;src=sdkpreparse" class="fb-xfbml-parse-ignore">Share</a></div>
+            </div></div>
+            <p>Copyright Boris Filin 2023</p>
+        </footer>
+
+        <script src="Scripts/DropDownNav.js"></script>
+        <script src="Scripts/Accessibility.js"></script>
+    </body>
+</html>

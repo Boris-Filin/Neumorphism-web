@@ -1,0 +1,33 @@
+
+/* This is the accessibility plaque present on every page.
+All of the rules are self-explanatory. */
+#access-mode {
+    /* position: absolute; */
+    /* top: 130px; */
+    width: 250px;
+    height: 80px;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+
+    font-family: Rockwell;
+    letter-spacing: 0.5px;
+    color: var(--text-col);
+}
+
+#access-counterweight {
+    width: 250px;
+}
+
+/* Resetting the margin for the tick button */
+#access-mode > .neu-button-wrapper {
+    margin: 5px;
+}
+
+/* Making the tick glow on press */
+#access-check + i {
+    --text-glow: rgb(50, 230, 50);
+    --text-shadow: rgb(100, 255, 100);
+}

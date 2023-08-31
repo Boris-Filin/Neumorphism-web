@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <!-- <meta name="color-scheme" content="light only"> -->
+
+        <!-- title, styles, icon pack link (font awesome), color scheme -->
+        <title>Neumorphism</title>
+        <link rel="stylesheet" href="Styles/Neumorphism/Neumorphism.css">
+        <link rel="stylesheet" href="Styles/PagesStyling.css">
+        <link rel="stylesheet" href="Styles/Neumorphism/Themes/SkyBlue.css">
+
+        <script src="https://kit.fontawesome.com/7b1233a124.js" crossorigin="anonymous"></script>
+        
+        <meta charset="UTF-8">
+        <meta name="description" content="Neumorphism design">
+        <meta name="keywords" content="CSS, Neumorphism, Design">
+        <meta name="author" content="Boris Filin">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    </head>
+    <body>
+    
+        <header class="sticky-header">
+            <nav id="header-nav" class="dropdown-nav">
+
+                <div class="flex-horiz">
+                    <div class="flex-vert justify-start">
+                        <h3>Trivia</h3>
+                        <a href="index.html" class="neu-link">Overview</a>
+                        <a href="appeal.html" class="neu-link">Appeal</a>
+                        <a href="gallery.html" class="neu-link">Gallery</a>
+                        <a href="issues.html" class="neu-link">Problems</a>
+                    </div>
+                    <hr style="margin: 0px">
+                    <div class="flex-vert justify-start">
+                        <h3>Code</h3>
+                        <a href="implementation.html" class="neu-link">Implementation</a>
+                        <a href="library.html" class="neu-link">Library</a>
+                        <a href="documentation.html" class="neu-link">Documentation</a>
+                        <a href="reflection.html" class="neu-link">Reflection</a>
+                    </div>
+                    <hr style="margin: 0px">
+                    <!-- <div class="flex-vert justify-start">
+                        <h3>Connections</h3>
+                    </div> -->
+                    <!-- <hr style="margin: 0px"> -->
+                    <div class="flex-vert justify-start">
+                        <h3>Other</h3>
+                        <a href="feedback.html" class="neu-link">Feedback</a>
+                        <a href="sourcelog.html" class="neu-link">Sourcelog</a>
+                        <a href="sitemap.html" class="neu-link">Sitemap</a>
+                    </div>
+                </div>
+
+                <br>
+                <hr class="outset-line">
+                <br>
+
+                <div class="flex-horiz justify-s-between">
+                    <h2>Neumorphism</h2>
+                    <div class="neu-button-wrapper">
+                        <input type="checkbox" class="neu-button" id="menu-check">
+                        <i class="fa-solid fa-bars"></i>
+                    </div>
+                </div>
+            </nav>
+        </header>
+        <div style="height: 120px"></div>
+
+
+        <div class="flex-horiz" style="align-items: center;">
+            <div class="outset-box" id="access-mode">
+                <p>Accessibility Mode:</p>
+                <div class="neu-button-wrapper">
+                    <input type="checkbox" class="neu-button" id="access-check">
+                    <i class="fa-solid fa-check"></i>
+                </div>
+            </div>
+
+            <div class="display" id="header-box">
+                <h2 id="header">Personal Appeal</h2>
+            </div>
+
+            <div id="access-counterweight"></div>
+        </div>
+
+        <div class="center-item">
+        <div class="outset-box glossy" style="max-width:800px">
+            <h2>How does Neumorphism appeal to different VARK aspects?</h2>
+            <p>
+VARK stands for visual, Audial, Reading, and Kinesthetic types of perception. People aren't strictly divided into those groups, but most of us have a main style of learning. Various designs can tickle some of those senses, and, depending on your audiences, that might be an important thing to consider. So, what type of sensory input does Neumorphism correspond to?<br>
+Click the eyes, ears, hand, or computer for each of the VARK aspects!<br>
+(<a class="text-link" href="https://www.freepik.com/free-vector/man-working-laptop-with-coffee-stationary-cartoon-vector-illustration_11045403.htm#page=2&query=vector%20person%20working%20with%20computer&position=27&from_view=search&track=ais">Image by catalyststuff on Freepik</a>)
+            </p>
+        </div>
+        </div>
+
+
+        <br>
+        <hr class="outset-line">
+        <br>
+
+        <!-- A typical image map. The id is used by the
+        ImageMapScaler.js script that dynamically changes
+        the area coords whenever the image is resized. -->
+        <div class="p-anchor" id="map-anchor"></div>
+        <div class="center-item">
+            <img src="Images/PersonWithLaptopSmall.png" usemap="#map-scalable" id="map-scalable-image" class="neu-image-borderless" alt="Person with comptuer">
+
+            <map name="map-scalable" id="map-scalable">
+                <area shape="circle" coords="405,190,38" alt="Eyes" href="#p-visual">
+                <area shape="circle" coords="490,190,38" alt="Eyes" href="#p-visual">
+
+                <area shape="rect" coords="322,163,358,222" alt="Ears" href="#p-audio">
+                <area shape="rect" coords="538,161,573,229" alt="Ears" href="#p-audio">
+
+                <area shape="poly" coords="306,340,570,340,555,490,320,490" alt="Computer" href="#p-reading">
+
+                <area shape="rect" coords="200,425,300,495" alt="Hand" href="#p-kinaesthetic">
+            </map>
+        </div>
+
+
+        <br>
+        <hr class="outset-line">
+        <br>
+
+        
+        <!-- This is the anchor that the map is linked to.
+        Without it the top of the paragraph is cut off by the
+        menu. The div is positioned 200 pixels above the
+        main paragraph. -->
+        <div class="p-anchor" id="p-visual"></div>
+        <div class="center-item">
+        <div class="flex-horiz" style="max-width: 900px">
+            <div class="outset-box glossy box-flex">
+                <h2>Visual input</h2>
+                <p>
+Whenever you visit a webpagefor the first time, your immediate impression is formed mostly based on its visual appeal. You will click off without paying attention to the content unless the visuals manage to attract your interest. In that sense, properly implemented Neumorphism is perfect.<br>
+First of all, the low-contrast colors make the page coherent. They are not too flashy, but they are not dull either, and well-designed color scheme creates a great atmosphere.<br>
+Besides that, one of the main advantages of Neumorphism is its uniqueness. It looks like its elements have actual depth. Most people have never seen anything of sorts, and they will definitely be curious enough to stick around.<br>
+                </p>
+            </div>
+            <div class="neu-button-wrapper">
+                <input type="checkbox" class="neu-button" id="display-btn-6">
+                <i class="fa-solid fa-eye"></i>
+            </div>
+        </div>
+        </div>
+
+
+        <br>
+        <hr class="outset-line">
+        <br>
+
+
+        <div class="p-anchor" id="p-audio"></div>
+        <div class="center-item">
+        <div class="flex-horiz" style="max-width: 900px">
+            <div class="neu-button-wrapper">
+                <input type="checkbox" class="neu-button" id="display-btn-1">
+                <i class="fa-solid fa-volume-high"></i>
+            </div>
+            <div class="outset-box glossy box-flex">
+                <h2>Audio input</h2>
+                <p>
+Obviously, when we are talking about the visual style of the page, the audio is not particularly relevant. Neumorphism is a complete visual design without the audio component. However, that doesn't mean that the two are completely separate. Both sound and visual design can work together to create a wonderful atmosphere. Neumorphism would be a perfect match with ambient music and calm sounds.<br>
+So, even though it isn't directly relevant to audio, the style goes well with relaxing audio projects, such as podcasts.
+                </p>
+            </div>
+        </div>
+        </div>
+
+
+        <br>
+        <hr class="outset-line">
+        <br>
+
+
+        <div class="p-anchor" id="p-reading"></div>
+        <div class="center-item">
+        <div class="flex-horiz" style="max-width: 900px">
+            <div class="outset-box glossy box-flex">
+                <h2>Reading</h2>
+                <p>
+The reading part of VARK is more relevant to content than style. Still, it has to be mentioned that Neumorphism can be good for text-heavy websites, although it really depends on what sort of content they present.<br>
+Neumorphism can help create nice division between blocks of text and structure your thouhgts. This very website has a lot of text and (I assume) looks fairly decent.<br>
+But, obviously, the style has its limits. For really large texts neumorphic blocks would become too repetitive and get in the way of the reader, so this styling option would not suit a news website or an archive. Still, for any websites with less narration it would work - a blog, a portfolio, or code docs would look great.
+                </p>
+            </div>
+            <div class="neu-button-wrapper">
+                <input type="checkbox" class="neu-button" id="display-btn-4">
+                <i class="fa-regular fa-newspaper"></i>
+            </div>
+        </div>
+        </div>
+
+
+        <br>
+        <hr class="outset-line">
+        <br>
+
+
+        <div class="p-anchor" id="p-kinaesthetic"></div>
+        <div class="center-item">
+        <div class="flex-horiz" style="max-width: 900px">
+            <div class="neu-button-wrapper">
+                <input type="checkbox" class="neu-button" id="display-btn-3">
+                <i class="fa-regular fa-hand"></i>
+            </div>
+            <div class="outset-box glossy box-flex">
+                <h2>Kinaesthetic input</h2>
+                <p>
+Kinaesthetic appeal is by far the most significant feature of the style. If you remember, I started the style description with these words: "<i>Look at the buttons to the right. Don't you just want to touch them, feel the sensation of those slight bevels? If so, you will enjoy Neumorphism.</i>"<br>
+Neumorphism is a very kinaesthetically pleasing style even for people who have different main VARK type, like myself. The outset buttons with round insets on click are very tempting.<br>
+So, if your audience is expected to be comprised of kinaesthetic people, Neumorphism is definitely the style for you.
+                </p>
+            </div>
+        </div>
+        </div>
+
+
+        
+        <div class="center-item" style="margin: 50px 0;">
+            <a href="issues.html" class="neu-link">
+                Biggest Porblems
+                <i class="fa-solid fa-arrow-right"></i>
+            </a>
+        </div>
+
+
+
+
+
+        <footer>
+            <div id="fb-root"></div>
+            <script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_GB/sdk.js#xfbml=1&version=v16.0" nonce="VeTOiwJb"></script>
+            <p>Enjoying your experience so far? Share it with others!</p>
+            <div class="flex-horiz"><div class="share-list">
+                <a class="twitter-share-button"
+                href="https://twitter.com/intent/tweet?text=Check%20out%20this%20Neumorphism%20design%20website!"
+                data-size="large">
+                <i class="fa-brands fa-twitter"></i> Tweet</a>
+    
+                <script src="https://platform.linkedin.com/in.js"></script>
+                <script type="IN/Share" data-url="https://www.linkedin.com" data-size="large"></script>
+    
+                
+                <div class="fb-share-button" data-href="https://developers.facebook.com/docs/plugins/" data-layout="button"><a target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fdevelopers.facebook.com%2Fdocs%2Fplugins%2F&amp;src=sdkpreparse" class="fb-xfbml-parse-ignore">Share</a></div>
+            </div></div>
+            <p>Copyright Boris Filin 2023</p>
+        </footer>
+
+        <script src="Scripts/DropDownNav.js"></script>
+        <script src="Scripts/Accessibility.js"></script>
+        <script src="Scripts/ImageMapScaler.js"></script>
+
+    </body>
+</html>

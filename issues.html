@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <!-- title, styles, icon pack link (font awesome), color scheme -->
+        <title>Neumorphism</title>
+        <link rel="stylesheet" href="Styles/Neumorphism/Neumorphism.css">
+        <link rel="stylesheet" href="Styles/PagesStyling.css">
+        <link rel="stylesheet" href="Styles/Neumorphism/Themes/Peach.css">
+
+        <script src="https://kit.fontawesome.com/7b1233a124.js" crossorigin="anonymous"></script>
+        
+        <meta charset="UTF-8">
+        <meta name="description" content="Neumorphism design">
+        <meta name="keywords" content="CSS, Neumorphism, Design">
+        <meta name="author" content="Boris Filin">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    </head>
+    <body>
+        <header class="sticky-header">
+            <nav id="header-nav" class="dropdown-nav">
+
+                <div class="flex-horiz">
+                    <div class="flex-vert justify-start">
+                        <h3>Trivia</h3>
+                        <a href="index.html" class="neu-link">Overview</a>
+                        <a href="appeal.html" class="neu-link">Appeal</a>
+                        <a href="gallery.html" class="neu-link">Gallery</a>
+                        <a href="issues.html" class="neu-link">Problems</a>
+                    </div>
+                    <hr style="margin: 0px">
+                    <div class="flex-vert justify-start">
+                        <h3>Code</h3>
+                        <a href="implementation.html" class="neu-link">Implementation</a>
+                        <a href="library.html" class="neu-link">Library</a>
+                        <a href="documentation.html" class="neu-link">Documentation</a>
+                        <a href="reflection.html" class="neu-link">Reflection</a>
+                    </div>
+                    <hr style="margin: 0px">
+                    <!-- <div class="flex-vert justify-start">
+                        <h3>Connections</h3>
+                    </div> -->
+                    <!-- <hr style="margin: 0px"> -->
+                    <div class="flex-vert justify-start">
+                        <h3>Other</h3>
+                        <a href="feedback.html" class="neu-link">Feedback</a>
+                        <a href="sourcelog.html" class="neu-link">Sourcelog</a>
+                        <a href="sitemap.html" class="neu-link">Sitemap</a>
+                    </div>
+                </div>
+
+                <br>
+                <hr class="outset-line">
+                <br>
+
+                <div class="flex-horiz justify-s-between">
+                    <h2>Neumorphism</h2>
+                    <div class="neu-button-wrapper">
+                        <input type="checkbox" class="neu-button" id="menu-check">
+                        <i class="fa-solid fa-bars"></i>
+                    </div>
+                </div>
+            </nav>
+        </header>
+        <div style="height: 120px"></div>
+
+
+        <div class="flex-horiz" style="align-items: center;">
+            <div class="outset-box" id="access-mode">
+                <p>Accessibility Mode:</p>
+                <div class="neu-button-wrapper">
+                    <input type="checkbox" class="neu-button" id="access-check">
+                    <i class="fa-solid fa-check"></i>
+                </div>
+            </div>
+
+            <div class="display" id="header-box">
+                <h2 id="header">Two main problems</h2>
+            </div>
+
+            <div id="access-counterweight"></div>
+        </div>
+
+        <div class="flex-horiz" id="p-access">
+            <div class="outset-box glossy box-flex">
+                <h2>Accessibility</h2>
+                <p>
+                    As I mentioned in the overview, by far the biggest issue of Neumorphism is low
+                    contrast. Unlike other styles, overall uniformity is one of the key principles.
+                    You can slightly improve the situation by manually tweaking the colors,
+                    but it still compares badly to usual websites. That is one of the reasons we
+                    don't see Neumorphism more often.
+                </p>
+                <p>
+                    If the issue is to be properly addressed, I think introducing an Accessibility
+                    Mode is the way to go about it. Such an option solves the problem without
+                    any design tradeoffs (which would be detremental to this particular style).
+                    However, this basically means adding an additional substyle to your website
+                    that would have to be developed alongside the main elements, further
+                    weighing down the excessive CSS required for this type of style.
+                </p>
+                <p>
+                    Which brings us to problem number two.
+                </p>
+            </div>
+            <div class="neu-image-display">
+                <img id="issues-img-2" src="Images/accessibility-beige-cropped.jpg" style="height: 100%; width:auto" alt="Poorly visible Neumorphic design">
+                <p class="image-attribution">
+                    <a href="https://www.freepik.com/free-vector/realistic-neumorphic-design-user-interface-elements_11797297.htm">
+                        Image by pikisuperstar on Freepik</a>
+                </p>
+            </div>
+        </div>
+
+
+
+        <br>
+        <hr class="outset-line">
+        <br>
+
+        
+
+        <div class="flex-horiz" id="p-complication">
+            <div class="neu-image-display">
+                <img id="issues-img-1" src="Images/code-screenshot.jpg" style="height: 100%; width:auto" alt="A lot of code that goes into writing the Neumorphism CSS">
+            </div>
+            <div class="outset-box glossy box-flex">
+                <h2>Complexity</h2>
+                <p>
+                    Even though the basis of Neumorphism is incredibly simple, the design overall
+                    takes a lot of time, effort, and experience to get right. I am still a novice,
+                    but this is not my first time working with CSS. Yet the styling of this website
+                    took me easily a dozen hours. Most of the time comes from small tweaks -
+                    oftentimes something doesn't feel quite right and fixing it can take absolute
+                    ages.<br><br>
+                    Furthermore, the relatively complex layout and look of elements means
+                    that positioning them accurately and accounting for different types of devices
+                    is also harder than usual.
+                </p>
+            </div>
+        </div>
+
+
+
+        <br>
+        <hr class="outset-line">
+        <br>
+
+
+
+        <div class="outset-box glossy" id="p-fin">
+            <h2>Main Point</h2>
+            <p>
+                 In conclusion, Neumorphism is an interesting design, but it is not scalable.
+                It would raise small blog or CV page would to a whole new level, but for
+                something more complex like a company website it would become an absolute
+                nightmare to manage and grow.
+            </p>
+            <p>
+                Luckily, I am guessig that if you are still reading, you are not a big executive
+                of a multi-million corporation, and probably aren't doing a megaproject,
+                so this style might actually be suitable for you.<br><br>
+                If that is the case, I have just the thing - a configurable implementation
+                of the very basics of Neumorphism that will allow you to jump past the first few
+                hours of development. Right on the next page!
+            </p>
+        </div>
+
+        <div class="double-element" style="margin: 50px 100px; gap: 30px">
+            <a href="implementation.html" class="neu-link">
+                <i class="fa-solid fa-arrow-left"></i>
+                Implementation
+            </a>
+            <a href="library.html" class="neu-link">
+                CSS Library
+                <i class="fa-solid fa-arrow-right"></i>
+            </a>
+        </div>
+
+
+        <footer>
+            <div id="fb-root"></div>
+            <script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_GB/sdk.js#xfbml=1&version=v16.0" nonce="VeTOiwJb"></script>
+            <p>Enjoying your experience so far? Share it with others!</p>
+            <div class="flex-horiz"><div class="share-list">
+                <a class="twitter-share-button"
+                href="https://twitter.com/intent/tweet?text=Check%20out%20this%20Neumorphism%20design%20website!"
+                data-size="large">
+                <i class="fa-brands fa-twitter"></i> Tweet</a>
+    
+                <script src="https://platform.linkedin.com/in.js"></script>
+                <script type="IN/Share" data-url="https://www.linkedin.com" data-size="large"></script>
+    
+                
+                <div class="fb-share-button" data-href="https://developers.facebook.com/docs/plugins/" data-layout="button"><a target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fdevelopers.facebook.com%2Fdocs%2Fplugins%2F&amp;src=sdkpreparse" class="fb-xfbml-parse-ignore">Share</a></div>
+            </div></div>
+            <p>Copyright Boris Filin 2023</p>
+        </footer>
+
+        <script src="Scripts/DropDownNav.js"></script>
+        <script src="Scripts/Accessibility.js"></script>
+    </body>
+</html>

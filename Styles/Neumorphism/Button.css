@@ -1,44 +1,66 @@
-
+/* Styling the unpressed button */
 .neu-button {
     width: 50px;
     height: 50px;
+    /* It's a checkbox, so to remove the check on press, we do this: */
     appearance: none;
 
+    /* Making the button round */
     border-radius: 50%;
     background-color: var(--bg);
-    /* background-image: radial-gradient(at 20% 20%, var(--bg-from) 10px, transparent); */
 
+    border: 3px var(--bg) solid;
+    margin: 0;
+    /* including the border in the width/height  */
+    box-sizing: border-box;
+
+    /* 3D effect */
     box-shadow: 3px 3px 5px var(--shadow),
         -3px -3px 5px var(--highlight);
-
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 30px;
 }
 
-.neu-button:after {
+/* The icon on the button; This is mostly about positioning it in the middle */
+/* The plus is here because a checbox is input and it cannot have child elements.,
+so it and the icon have to be placed in a wrapper as siblings. */
+.neu-button + i {
+    position: absolute;
+    text-align: center;
     color: var(--text-col);
-    font-family: FontAwesome;
-    content: '\f00c';
+    /* This thing makes sure the checkbox os not obstructed by the icon,
+    since technically the latter is a separate element */
+    pointer-events: none;
+    font-size: 25px;
 }
 
+/* Highlight on hover; radial gradient makes it seem a bit 3D, it acts as a highlight */
 .neu-button:hover {
     background-image: radial-gradient(at 20% 20%, var(--bg-from) 10px, transparent);
-
-    /* background-color: var(--bg-from); */
 }
 
-.neu-button:checked{
-    border: 3px var(--bg) solid;
-
+/* Both checked and active is made to suppport regular buttons */
+.neu-button:checked, .neu-button:active{
     box-shadow: 3px 3px 5px var(--shadow),
         -3px -3px 5px var(--highlight),
+/* Inset shadows. Look at the implementation page where they are explained in great detail */
         2px 2px 5px rgb(0, 0, 0, 0.1) inset,
         -2px -2px 5px rgb(255, 255, 255, 0.1) inset;
 }
 
-.neu-button:checked::after{
-    color: var(--text-highlight);
-    text-shadow: 0 0 2px var(--text-highlight);
+/* Adding glow to icons on press */
+.neu-button:checked + i, .neu-button:active + i{
+    color: var(--text-glow);
+    text-shadow: 0 0 3px var(--text-shadow);
+}
+
+/* This is the wrapper that allows the button and tick to be aligned and positioned in the middle. */
+.neu-button-wrapper {
+/* Relative position is needed cause icons have absolute positions, which only take parent into
+account if it has relative position. Go figure... */
+    position: relative;
+    /* Typical central allignment using flex */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+    margin: 0;
 }

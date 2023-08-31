@@ -1,0 +1,71 @@
+/* This is the file for the drop-down nav
+I use. I wanted smooth transitions, so
+I used positional translation instead of toggling
+elements with disply:none. */
+
+
+/* Makes syre the header stays at the top of the
+viewport */
+.sticky-header {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    margin: 0 -50px;
+    /* Otherwise it blocks all of the buttons,
+    even though they are visually available */
+    pointer-events: none;
+}
+
+
+.dropdown-nav {
+    pointer-events: all;
+    background-color: var(--bg);
+    /* position: sticky; */
+    position: sticky;
+    top: 0; left: 0;
+
+    /* margin: 0 -50px; */
+    /* width: calc(100% + 100px); */
+    margin: 0;
+    width: 100%;
+
+    /* Hide the nav by default */
+    translate: 0 calc(-100% + 100px);
+    box-shadow: 0 -10px 5px -10px black inset,
+        0 5px 10px rgb(0,0,0, 0.3);
+    z-index: 1000;
+    padding: 20px 50px;
+    box-sizing: border-box;
+
+    /* We can change the position and shadows,
+    and these lines will automatically animate it. */
+    transition: translate 1s ease-in-out,
+        box-shadow 1s ease-in-out;
+}
+
+/* The little display on top-left */
+.dropdown-nav h2 {
+    font-weight: normal;
+    color: white;
+    text-shadow: 0 0 3px white;
+
+    padding: 10px;
+
+    margin: 0;
+
+    border-radius: 10px;
+    border: 5px var(--bg) solid;
+    box-shadow: 3px 3px 5px var(--shadow),
+        -3px -3px 5px var(--highlight);
+    background-image: linear-gradient(var(--shadow) 100%, black);
+}
+
+/* This is for the topic column headers */
+.dropdown-nav h3 {
+    margin: 0;
+    text-align: center;
+}
+
+
+
+/* © Boris Filin 2023 */

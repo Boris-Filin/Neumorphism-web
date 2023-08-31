@@ -1,0 +1,122 @@
+/* Some restrictions for the image to make sure it doesn't span the entire page */
+.neu-image-display, .neu-image-borderless {
+    width: auto;
+    max-width: 90%;
+    height: 300px;
+    overflow: hidden;
+
+    border: 10px var(--bg) solid;
+
+    background-color: var(--bg);
+
+    border-radius: 15px;
+
+    box-shadow:
+        2px 2px 4px var(--shadow),
+        -2px -2px 4px var(--highlight),
+        -2px -2px 4px var(--highlight);
+        
+    position: relative;
+
+    padding: 0;
+    margin: 10px;
+
+}
+
+
+/* This is an inset effect on top of the image.
+You can spot it if you look closely.
+The ::after tag was used so that the effect appears
+on top of the image. */
+
+.neu-image-display::after {
+    position: absolute;
+    content: "";
+    top: -5px; right: -5px; bottom: -5px; left: -5px;
+    border: 5px var(--bg) solid;
+    border-radius: 10px;
+    pointer-events: none;
+    margin: 0px;
+
+
+    box-shadow:  1px 1px 4px var(--shadow) inset,
+        -1px -1px 4px var(--highlight) inset;
+
+}
+
+.neu-image-display > img {
+    border-radius: 5px;
+}
+
+.neu-image-borderless {
+    border: 0;
+    height: auto;
+    /* width: auto; */
+    background-color: transparent;
+}
+
+/* .neu-image-display > img:hover {
+    filter: blur(2px);
+    content: "Text";
+    color: red;
+} */
+
+
+/* The entirety of the following code
+creates the blur overlay over the image when 
+the user hovers over it, and shows the link to the
+image source. Alternatively the latter can be found
+in the sourcelog. */
+
+.image-attribution {
+    width: 100%;
+    height: 100%;
+    top: -16px;
+    left: 0;
+    position: absolute;
+    backdrop-filter: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    /* This hides the overlay by default, only turning it on on hover */
+    background-color: transparent;
+}
+
+.image-attribution > a {
+    display: none;
+}
+
+.image-attribution:hover {
+    /* Image dimmed */
+    background-color: rgb(0, 0, 0, 0.2);
+    /* Image blur */
+    backdrop-filter: blur(2px);
+}
+
+.image-attribution:hover > a {
+    display: block;
+}
+
+.image-cell {
+    padding: 0;
+    position: relative;
+    border-radius: 5px;
+}
+
+.image-cell::after {
+    border-radius: 5px;
+    position: absolute;
+    content: "";
+    top: 0; right: 0; bottom: 3px; left: 0;
+    /* border: 5px var(--bg) solid; */
+    /* border-radius: 10px; */
+    pointer-events: none;
+    margin: 0px;
+
+
+    box-shadow:  1px 1px 4px var(--shadow) inset,
+        -1px -1px 4px var(--highlight) inset;
+
+}
+/* © Boris Filin 2023 */

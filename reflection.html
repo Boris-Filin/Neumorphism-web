@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <!-- title, styles, icon pack link (font awesome), color scheme -->
+        <title>Neumorphism</title>
+        <link rel="stylesheet" href="Styles/Neumorphism/Neumorphism.css">
+        <link rel="stylesheet" href="Styles/PagesStyling.css">
+        <link rel="stylesheet" href="Styles/Neumorphism/Themes/DarkGrey.css">
+
+        <script src="https://kit.fontawesome.com/7b1233a124.js" crossorigin="anonymous"></script>
+
+        <link rel="stylesheet" href="Libraries/highlight/styles/base16/monokai.min.css">
+        <script src="Libraries/highlight/highlight.min.js"></script>
+        <script>hljs.highlightAll();</script>
+
+        <meta charset="UTF-8">
+        <meta name="description" content="Neumorphism design">
+        <meta name="keywords" content="CSS, Neumorphism, Design">
+        <meta name="author" content="Boris Filin">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        
+    </head>
+    <body>
+
+
+        <header class="sticky-header">
+            <nav id="header-nav" class="dropdown-nav">
+
+                <div class="flex-horiz">
+                    <div class="flex-vert justify-start">
+                        <h3>Trivia</h3>
+                        <a href="index.html" class="neu-link">Overview</a>
+                        <a href="appeal.html" class="neu-link">Appeal</a>
+                        <a href="gallery.html" class="neu-link">Gallery</a>
+                        <a href="issues.html" class="neu-link">Problems</a>
+                    </div>
+                    <hr style="margin: 0px">
+                    <div class="flex-vert justify-start">
+                        <h3>Code</h3>
+                        <a href="implementation.html" class="neu-link">Implementation</a>
+                        <a href="library.html" class="neu-link">Library</a>
+                        <a href="documentation.html" class="neu-link">Documentation</a>
+                        <a href="reflection.html" class="neu-link">Reflection</a>
+                    </div>
+                    <hr style="margin: 0px">
+                    <!-- <div class="flex-vert justify-start">
+                        <h3>Connections</h3>
+                    </div> -->
+                    <!-- <hr style="margin: 0px"> -->
+                    <div class="flex-vert justify-start">
+                        <h3>Other</h3>
+                        <a href="feedback.html" class="neu-link">Feedback</a>
+                        <a href="sourcelog.html" class="neu-link">Sourcelog</a>
+                        <a href="sitemap.html" class="neu-link">Sitemap</a>
+                    </div>
+                </div>
+
+                <br>
+                <hr class="outset-line">
+                <br>
+
+                <div class="flex-horiz justify-s-between">
+                    <h2>Neumorphism</h2>
+                    <div class="neu-button-wrapper">
+                        <input type="checkbox" class="neu-button" id="menu-check">
+                        <i class="fa-solid fa-bars"></i>
+                    </div>
+                </div>
+            </nav>
+        </header>
+        <div style="height: 120px"></div>
+
+
+        <div class="flex-horiz" style="align-items: center;">
+            <div class="outset-box" id="access-mode">
+                <p>Accessibility Mode:</p>
+                <div class="neu-button-wrapper">
+                    <input type="checkbox" class="neu-button" id="access-check">
+                    <i class="fa-solid fa-check"></i>
+                </div>
+            </div>
+
+            <div class="display" id="header-box">
+                <h2 id="header">Reflection</h2>
+            </div>
+
+            <div id="access-counterweight"></div>
+        </div>
+
+        <div class="flex-horiz">
+        <div class="neu-button-wrapper">
+            <input type="checkbox" class="neu-button" id="display-btn-6">
+            <i class="fa-solid fa-book-open"></i>
+        </div>
+        <div class="outset-box box-flex glossy" style="max-width:50vw">
+            <h2>What have I learned in developing this website</h2>
+            <p>
+When starting the assignment, I already had some experience with the main components of web development - various HTML components and rules, CSS, general styling conventions, and JavaScript fundamentals. Despite that, it was a great learning experience in multiple ways.
+            </p>
+        </div>
+        <div class="neu-button-wrapper">
+            <input type="checkbox" class="neu-button" id="display-btn-3">
+            <i class="fa-solid fa-code"></i>
+        </div>
+        </div>
+
+        <br>
+        <hr class="outset-line">
+        <br>
+
+        <div class="flex-horiz" style="align-items: center;">
+        <div class="outset-box glossy" style="max-width:800px">
+            <p>
+First of all, it gave me an opportunity to hone my skills in the aforementioned areas of web design. At the start of the course, I was rather slow and unconfident. It took me roughly a dozen hours to get the first of now twenty CSS files that comprise the styling of this project. Granted, it contained the fundamental building blocks of the whole design, but it was still comparatively small. But after that I was way more familiar with CSS, so all of the remaining files took about the same amount of time.
+            </p>
+            <p>
+Besides just plain practice, I also expanded my knowledge of niche HTML and CSS features, such as variables, transitions, and multiple spreadsheet import for the latter. I was also missing some of the basic HTML knowledge that never came up in my previous studies. For example, I never dealt with forms before. This projct prompted me to do more research and get familiar with all of the above.
+            </p>
+            <p><i>
+You can follow my development steps by clicking the Implementation button on the right or below.
+            </i></p>
+        </div>
+        <a href="implementation.html" class="neu-link">Implementation</a>
+        </div>
+        
+        <br>
+        <hr class="outset-line">
+        <br>
+
+        <div class="flex-horiz" style="align-items: center;">
+        <pre><code class="language-HTML code-display box-flex" style="width:fit-content; font-size: x-large;"
+>&lt;body&gt;
+    &lt;Neumorphism /&gt;
+&lt;/body&gt;
+</code></pre>
+        <div class="outset-box glossy box-flex" style="max-width:800px">
+            <p>
+Finally, I have learned quite a bit about the main principles of web design. A lot of these things seem like common sense, but you don't realise how much you've been doing wrong until you think reflect on it. For example, the idea that large images need to be resized and originals be available on clicking the smaller image. It seems painfully obvious when you think about it, but it was a new discovery for me.
+            </p>
+            <p>
+Overall, it was a great learning experience and I quite fond of what came out of it. I wanted to explore Neumorphism for a while, and this project allowed me to do just that. The result is this very website, and I really hope that you enjoyed visiting it as much as I did making it.
+            </p>
+        </div>
+        </div>
+
+
+        <footer>
+            <div id="fb-root"></div>
+            <script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_GB/sdk.js#xfbml=1&version=v16.0" nonce="VeTOiwJb"></script>
+            <p>Enjoying your experience so far? Share it with others!</p>
+            <div class="flex-horiz"><div class="share-list">
+                <a class="twitter-share-button"
+                href="https://twitter.com/intent/tweet?text=Check%20out%20this%20Neumorphism%20design%20website!"
+                data-size="large">
+                <i class="fa-brands fa-twitter"></i> Tweet</a>
+
+                <script src="https://platform.linkedin.com/in.js"></script>
+                <script type="IN/Share" data-url="https://www.linkedin.com" data-size="large"></script>
+
+                
+                <div class="fb-share-button" data-href="https://developers.facebook.com/docs/plugins/" data-layout="button"><a target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fdevelopers.facebook.com%2Fdocs%2Fplugins%2F&amp;src=sdkpreparse" class="fb-xfbml-parse-ignore">Share</a></div>
+            </div></div>
+            <p>Copyright Boris Filin 2023</p>
+        </footer>
+
+        <script src="Scripts/DropDownNav.js"></script>
+        <script src="Scripts/Accessibility.js"></script>
+    </body>
+</html>

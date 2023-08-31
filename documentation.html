@@ -1,0 +1,778 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <!-- title, styles, icon pack link (font awesome), color scheme -->
+        <title>Neumorphism</title>
+        <link rel="stylesheet" href="Styles/Neumorphism/Neumorphism.css">
+        <link rel="stylesheet" href="Styles/PagesStyling.css">
+        <link rel="stylesheet" href="Styles/DemosDocumentation.css">
+        <link rel="stylesheet" href="Styles/Neumorphism/Themes/Dark.css">
+
+        <script src="https://kit.fontawesome.com/7b1233a124.js" crossorigin="anonymous"></script>
+        
+        <link rel="stylesheet" href="Libraries/highlight/styles/base16/monokai.min.css">
+        <script src="Libraries/highlight/highlight.min.js"></script>
+        <script>hljs.highlightAll();</script>
+
+        
+        <meta charset="UTF-8">
+        <meta name="description" content="Neumorphism design">
+        <meta name="keywords" content="CSS, Neumorphism, Design">
+        <meta name="author" content="Boris Filin">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    </head>
+    <body>
+        <header class="sticky-header">
+            <nav id="header-nav" class="dropdown-nav">
+
+                <div class="flex-horiz">
+                    <div class="flex-vert justify-start">
+                        <h3>Trivia</h3>
+                        <a href="index.html" class="neu-link">Overview</a>
+                        <a href="appeal.html" class="neu-link">Appeal</a>
+                        <a href="gallery.html" class="neu-link">Gallery</a>
+                        <a href="issues.html" class="neu-link">Problems</a>
+                    </div>
+                    <hr style="margin: 0px">
+                    <div class="flex-vert justify-start">
+                        <h3>Code</h3>
+                        <a href="implementation.html" class="neu-link">Implementation</a>
+                        <a href="library.html" class="neu-link">Library</a>
+                        <a href="documentation.html" class="neu-link">Documentation</a>
+                        <a href="reflection.html" class="neu-link">Reflection</a>
+                    </div>
+                    <hr style="margin: 0px">
+                    <!-- <div class="flex-vert justify-start">
+                        <h3>Connections</h3>
+                    </div> -->
+                    <!-- <hr style="margin: 0px"> -->
+                    <div class="flex-vert justify-start">
+                        <h3>Other</h3>
+                        <a href="feedback.html" class="neu-link">Feedback</a>
+                        <a href="sourcelog.html" class="neu-link">Sourcelog</a>
+                        <a href="sitemap.html" class="neu-link">Sitemap</a>
+                    </div>
+                </div>
+
+                <br>
+                <hr class="outset-line">
+                <br>
+
+                <div class="flex-horiz justify-s-between">
+                    <h2>Neumorphism</h2>
+                    <div class="neu-button-wrapper">
+                        <input type="checkbox" class="neu-button" id="menu-check">
+                        <i class="fa-solid fa-bars"></i>
+                    </div>
+                </div>
+            </nav>
+        </header>
+        <div style="height: 120px"></div>
+
+
+        <div class="flex-horiz" style="align-items: center;">
+            <div class="outset-box" id="access-mode">
+                <p>Accessibility Mode:</p>
+                <div class="neu-button-wrapper">
+                    <input type="checkbox" class="neu-button" id="access-check">
+                    <i class="fa-solid fa-check"></i>
+                </div>
+            </div>
+
+            <div class="display" id="header-box">
+                <h2 id="header">Documentation</h2>
+            </div>
+
+            <div id="access-counterweight"></div>
+        </div>
+
+        <div class="center-item">
+        <div class="outset-box" style="max-width:800px">
+            <h2>This is your typical documentation page.</h2>
+            <p>
+                This page contains all of the classes added with the library available
+                at the download page, as well as the color scheme guide.
+            </p>
+        </div>
+        </div>
+
+        <br>
+        <hr class="outset-line">
+        <br>
+
+        <div class="flex-horiz">
+        <div class="outset-box" style="max-width: 600px;">
+            <h2>Micro-table of contents</h2>
+            <p>
+If you are looking for anything specific, you can jump right to that topic using one of the following links:
+            </p>
+<ul>
+<li><a class="text-link" href="#p-colors">Color schemes</a></li>
+<li><a class="text-link" href="#p-outset-box">outset-box</a></li>
+<li><a class="text-link" href="#p-inset-box">inset-box</a></li>
+<li><a class="text-link" href="#p-outset-line">outset-line</a></li>
+<li><a class="text-link" href="#p-neu-image-display">neu-image-display</a></li>
+<li><a class="text-link" href="#p-neu-image-borderless">neu-image-borderless</a></li>
+<li><a class="text-link" href="#p-image-attribution">image-attribution</a></li>
+<li><a class="text-link" href="#p-neu-button">neu-button</a></li>
+<li><a class="text-link" href="#p-neu-button-wrapper">neu-button-wrapper</a></li>
+<li><a class="text-link" href="#p-hover-button">hover-button</a></li>
+<li><a class="text-link" href="#p-display">display</a></li>
+<li><a class="text-link" href="#p-code-display">code-display</a></li>
+<li><a class="text-link" href="#p-inset-display">inset-display</a></li>
+<li><a class="text-link" href="#p-sticky-header">sticky header</a></li>
+<li><a class="text-link" href="#p-dropdown-nav">dropdown-nav</a></li>
+<li><a class="text-link" href="#p-neu-link">neu-link</a></li>
+<li><a class="text-link" href="#p-text-link">text-link</a></li>
+<li><a class="text-link" href="#p-p-anchor">p-anchor</a></li>
+<li><a class="text-link" href="#p-flexbox">Flexbox subclasses</a></li>
+
+</ul>
+        </div>
+        </div>
+
+        <br>
+        <hr class="outset-line">
+        <br>
+
+        <div class="p-anchor" id="p-colors"></div>
+        <div class="outset-box">
+            <h2>Color schemes</h2>
+            <p>
+Neumorphism is generally a monochrome design, however that one color can be varied. The project currently has 7 themes including the default, and you can also make your own ones if you like. Here are the 6 custom ones:</p>
+<ul>
+    <li>Dark</li>
+    <li>DarkGrey</li>
+    <li>Peach</li>
+    <li>Red</li>
+    <li>SkyBlue</li>
+    <li>Violet</li>
+</ul>
+<p>
+To use them, simply import one of them as a regular CSS stylesheet. The path <i>[path-to-library]</i>/Neumorphism/Themes/<i>[theme-name]</i>.css
+            </p>
+        </div>
+        <div class="outset-box">
+            <h2>Making your own color schemes</h2>
+            <p>
+Apart from using pre-defined themes, you can create your own. They are all defined by the variables in the :root element. You will need to create a separate stylesheet where you set those variables and import it with the rest of your CSS. Here are the variables you can currently set:</p>
+<ul>
+    <li>--bg - the value of your main color</li>
+    <li>--bg-from, --bg-to - if you want a gradient to your bg, set these variables to slightly different values. It will overwrite the --bg variable</li>
+    <li>--bg-tinted - a slightly darkened background color for certain elements</li>
+    <li>--shadow - the value of the shadows of elements. Set darker for darker bg. For lighter bg, use the transparency channel to reduce contrast.</li>
+    <li>--highlight - the value of the highlights of elements. Opposite the shadows. Same applies with transparency.</li>
+    <li>--access-main - the accessibility outline for accessibility mode</li>
+    <li>--access - The glow around the accessibility frame</li>
+</ul>
+        </div>
+
+        <br>
+        <hr class="outset-line">
+        <br>
+
+        <div class="p-anchor" id="p-outset-box"></div>
+        <div class="outset-box box-flex">
+            <h2>outset-box</h2>
+            <p>
+This is the main element of the design. It creates an outset rectangle with rounded edges. If the accessibility values are not set to 0, it also has a glowing outline. Any other element, including all of those defined in this style, can be placed inside of the container.
+            </p>
+        </div>
+
+        <div class="flex-horiz">
+        <div class="flex-vert box-flex">
+
+        <div class="outset-box box-flex">
+            <h2>h2 (outset-box)</h2>
+            <p>
+To create a glowing header for the outset box, use h2 tags.
+            </p>
+        </div>
+
+        <div class="outset-box box-flex">
+            <h2>h3 (outset-box)</h2>
+            <p>
+Whenerver you need to number a few outset boxes, you can wrap the number in an h3 tag, which will create a circular image around it, as well as highlight the number itself. It is conflicting with h2, so you should choose one header for each box.
+            </p>
+        </div>
+        </div>
+        <div class="flex-vert box-flex">
+        <pre><code class="language-HTML code-display box-flex"
+>&lt;div class="outset-box"&gt;
+    &lt;h2&gt;Example box&lt;/h2&gt;
+    &lt;p&gt;
+        Lorem Ipsum or something,
+        idk I'm not a specialist.
+    &lt;/p&gt;
+    &lt;div class="neu-button-wrapper"&gt;
+        &lt;input type="checkbox" class="neu-button"&gt;
+        &lt;i class="fa-solid fa-thumbs-up"&gt;&lt;/i&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+</code></pre>
+
+        <div class="outset-box box-flex">
+            <h2>Example box</h2>
+            <p>
+                Lorem Ipsum or something,
+                idk I'm not a specialist.
+            </p>
+            <div class="neu-button-wrapper" style="margin-top: 20px">
+                <input type="checkbox" class="neu-button" id="display-btn-3">
+                <i class="fa-solid fa-thumbs-up"></i>
+            </div>
+        </div>
+        </div>
+        </div>
+
+        <br>
+        <hr class="outset-line">
+        <br>
+
+        <div class="p-anchor" id="p-inset-box"></div>
+        <div class="outset-box">
+            <h2>inset-box</h2>
+            <p>
+An opposite of the outset box. On this website, the most common use is in forms as an input field. However, that is not the only possible use - it can be used as widely as its counterpart. When the inset box has focus, such as a text area being interacted with, it creates a slight glow effect to highlight the chosen box.
+            </p>
+        </div>
+
+        <div class="flex-horiz">
+            <pre><code class="language-HTML code-display box-flex"
+>&lt;form class="outset-box"&gt;
+    &lt;h2&gt;Example form&lt;/h2&gt;
+    &lt;input name="name" type="name" class="inset-box"
+        placeholder="Enter your name here."&gt;
+    &lt;textarea name="main" rows="2" class="inset-box" id="feedback"
+        placeholder="Please share your feedback"&gt;&lt;/textarea&gt;
+&lt;/form&gt;
+</code></pre>
+        <form class="outset-box box-flex">
+            <h2>Example form</h2>
+            <input name="name" type="text" class="inset-box" placeholder="Enter your name here.">
+            <textarea name="main" rows="2" class="inset-box" id="feedback"
+                placeholder="Please share your feedback"></textarea>
+        </form>
+
+        </div>
+
+        <br>
+        <hr class="outset-line">
+        <br>
+
+        <div class="p-anchor" id="p-outset-line"></div>
+
+        <div class="flex-horiz">
+        <div class="outset-box box-flex">
+            <h2>outset-line</h2>
+            <p>
+This is a thick divider line that is used to separate sections of the page. You can see it all over this page. It is horizontal by dedault, but it can be vertical in a horizontal layout. The latter is usually done with flexbox.
+            </p>
+        </div>
+        <hr class="outset-line">
+        <div class="flex-vert">
+        <pre><code class="language-HTML code-display box-flex"
+>&lt;hr class="outset-line"&gt;
+</code></pre>
+        </div>
+        </div>
+
+        <br>
+        <hr class="outset-line">
+        <br>
+
+        <div class="p-anchor" id="p-neu-image-display"></div>
+        
+        <div class="flex-horiz">
+        <div class="flex-vert box-flex">
+        <div class="outset-box box-flex">
+            <h2>neu-image-display</h2>
+            <p>
+Whenever you need to incorporate an image, this display creates an outset element that the image is placed into. It should be noted that the width and height of the whole ordeal should be set in the img component, not the display.
+            </p>
+        </div>
+        <div class="p-anchor" id="p-image-attribution"></div>
+        <div class="outset-box box-flex">
+            <h2>image-attribution</h2>
+            <p>
+If you need to site the image origin and you don't want to add text around the image, use image-attribution <i>paragraph</i> within the image container, and add the text within the paragraph. It will create a blur effect showing the text when you hover over the image.
+            </p>
+        </div>
+        </div>
+        <div class="flex-vert box-flex">
+        <pre><code class="language-HTML code-display box-flex"
+>&lt;div class="neu-image-display"&gt;
+    &lt;img src="Images/img.jpg" alt="Image description"&gt;
+    &lt;p class="image-attribution"&gt;
+        &lt;a href="[source-link]"&gt;Image by Author&lt;/a&gt;
+    &lt;/p&gt;
+&lt;/div&gt;
+</code></pre>
+
+        <div class="p-anchor" id="p-neu-image-borderless"></div>
+
+        <div class="outset-box box-flex">
+            <h2>neu-image-borderless</h2>
+            <p>
+This creates the same image display, except there is no inset effect for the image. Useful for displaying images with transparency. (For example how it was made on the <a class="text-link" href="appeal.html">appeal page</a>)
+            </p>
+        </div>
+        </div>
+        </div>
+
+        <div class="flex-horiz">
+        <div class="neu-image-display" style="height: 380px; width: 380px" >
+            <img src="Images/corgi.jpg" style="height: 380px; width: 380px" alt="Nice corgi">
+            <p class="image-attribution">
+<a class="text-link" href="https://www.freepik.com/free-photo/corgi-dog-is-lying-blue-sofa_27072515.htm#query=doge&position=12&from_view=search&track=sph">Image by ArtPhoto_studio on Freepik</a>
+            </p>
+<!-- <a href="https://www.freepik.com/free-photo/corgi-dog-is-lying-blue-sofa_27072515.htm#query=doge&position=12&from_view=search&track=sph">Image by ArtPhoto_studio</a> on Freepik -->
+        </div>
+        </div>
+
+        <br>
+        <hr class="outset-line">
+        <br>
+
+        <div class="p-anchor" id="p-neu-button"></div>
+        
+        <div class="flex-horiz">
+            <div class="flex-vert box-flex" style="gap:10px">
+                <div class="outset-box box-flex">
+                    <h2>neu-button</h2>
+                    <p>
+This is a general round button with a glowing icon. Can be used on a button or on a checkbox. Always has a 50px by 50px size.<br>
+To set the glow color of the icon, set --text-glow and --text-shadow properties for the main and glow colors respectively. NOTE: The properties have to be set to the icon, not the button itself.
+                    </p>
+                </div>
+        
+                <div class="p-anchor" id="p-neu-button-wrapper"></div>
+
+                <div class="outset-box box-flex">
+                    <h2>neu-button-wrapper</h2>
+                    <p>
+Because checkboxes can't contain children, this class has to go around the checkbox and the icon so that they can be styled together.    
+                    </p>
+                </div>
+                <div id="demo-1" class="inset-display box-flex demo" style="margin-top: 20px;">
+                    <div class="neu-button-wrapper">
+                        <input type="checkbox" class="neu-button demo-button" id="demo-btn-1">
+                        <i class="fa-solid fa-heart"></i>
+                    </div>
+                </div>
+            </div>
+            
+
+            <div class="flex-vert">
+                <div class="box-flex">
+                    <pre><code class="language-HTML code-display"
+>&lt;div class="neu-button-wrapper"&gt;
+  &lt;input type="checkbox"
+    class="neu-button" id="btn-1"&gt;
+  &lt;i class="fa-solid fa-heart"&gt;&lt;/i&gt;
+&lt;/div&gt;
+
+&lt;style&gt;
+  #btn-1 + i {
+    --text-glow:   rgb(255, 50, 50);
+    --text-shadow: rgb(255, 50, 50);
+  }
+&lt;/style&gt;
+</code></pre>
+                </div>
+            </div>
+        </div>
+
+        <br>
+        <hr class="outset-line">
+        <br>
+        
+        <div class="p-anchor" id="p-hover-button"></div>
+
+        <div class="flex-horiz">
+            <div class="flex-vert box-flex">
+                <div class="outset-box box-flex">
+                    <h2>hover-button</h2>
+                    <p>
+This is a "floating" button button that appears to be above the page. Good for sticky buttons such as "go to top".<br>
+Same as with the regular button, to set the glow color of the icon, set --text-glow and --text-shadow properties for the main and glow colors respectively. UNLIKE the regular button, the properties have to be set for the button itself.
+                    </p>
+                </div>
+                
+                <div id="demo-2" class="inset-display box-flex demo" style="margin-top: 20px;">
+                    <button class="hover-button" id="demo-btn-2">
+                        <i class="fa-solid fa-question"></i>
+                    </button>
+                </div>
+            </div>
+
+            <div class="flex-vert">
+                <div class="box-flex">
+                    <pre><code class="language-HTML code-display"
+>&lt;button class="hover-button" id="hover-btn-1"&gt;
+    &lt;i class="fa-solid fa-question"&gt;&lt;/i&gt;
+&lt;/button&gt;
+
+&lt;style&gt;
+  #hover-btn-1 {
+    --text-glow:   blue;
+    --text-shadow: aqua;
+  }
+&lt;/style&gt;
+</code></pre>
+                </div>
+            </div>
+        </div>
+
+
+
+        <br>
+        <hr class="outset-line">
+        <br>
+
+        <div class="p-anchor" id="p-display"></div>
+
+        <div class="flex-horiz">
+            <div class="flex-vert box-flex" style="gap:10px">
+                <div class="outset-box box-flex">
+                    <h2>display</h2>
+                    <p>
+This is a text display that is used to show big glowing text, typically titles.
+                    </p>
+                </div>
+                <div class="box-flex">
+                    <pre><code class="language-HTML code-display"
+>&lt;div class="display"&gt;
+    &lt;h2&gt;Title&lt;/h2&gt;
+&lt;/div&gt;
+</code></pre>
+                </div>
+                
+            </div>
+            <div id="demo-3" class="inset-display box-flex demo" style="margin-top: 20px;">
+                <div class="display" id="demo-display-1">
+                    <h2>Title</h2>
+                </div>
+            </div>
+        </div>
+
+
+        <br>
+        <hr class="outset-line">
+        <br>
+
+        <div class="p-anchor" id="p-code-display"></div>
+
+        <div class="flex-horiz">
+            <div class="flex-vert box-flex" style="gap:10px">
+                <div class="outset-box box-flex">
+                    <h2>code-display</h2>
+                    <p>
+This is a display for your code. Note that highlighting is done through highlight.js library, so you will need that to get the code colors.
+                    </p>
+                </div>
+                <div class="box-flex">
+                    <pre><code class="language-CSS code-display"
+>h1 {
+    font-family: Arial;
+    font-size: x-large;
+    color: #330033;
+}
+</code></pre>
+                </div>
+            </div>
+
+            <div class="box-flex">
+                <pre><code class="language-HTML code-display"
+>&lt;pre&gt;&lt;code class="language-CSS code-display"&gt;
+h1 {
+font-family: Arial;
+font-size: x-large;
+color: #330033;
+}
+&lt;/code&gt;&lt;/pre&gt;
+</code></pre>
+            </div>
+        </div>
+
+
+        <br>
+        <hr class="outset-line">
+        <br>
+
+        <div class="p-anchor" id="p-inset-display"></div>
+
+        <div class="flex-horiz">
+            <div class="flex-vert box-flex" style="gap:10px">
+                <div class="outset-box box-flex">
+                    <h2>inset-display</h2>
+                    <p>
+This is a display with an outset border around it. The majority of demos on this page are done using one.
+                    </p>
+                </div>
+                <div class="box-flex">
+                    <pre><code class="language-HTML code-display"
+>&lt;div class="inset-display" id="demo-display-1"&gt;    
+    &lt;p&gt;&lt;i&gt;Inset display&lt;/i&gt;&lt;/p&gt;
+&lt;/div&gt;
+</code></pre>
+                </div>
+                
+            </div>
+            <div class="inset-display box-flex demo" style="margin-top: 20px;">
+                <div class="inset-display" id="demo-display-2">
+                    <p>Inset display</p>
+                </div>
+            </div>
+        </div>
+
+
+        <br>
+        <hr class="outset-line">
+        <br>
+
+        <div class="p-anchor" id="p-sticky-header"></div>
+
+        <div class="flex-horiz">
+            <div class="flex-vert box-flex">
+                <div class="outset-box box-flex">
+                    <h2>sticky-header</h2>
+                    <p>
+This header is used as a container for whatever sticky elements you need to <i>stick</i> in your website. It has no appearance, and it occupies 100% of viewport width and height. To avoid blocking interactible elements on the page, the pointer events for it are turned off, so, if you are adding your own elements to it, make sure to reset that property to "all" for each element.
+                    </p>
+                </div>
+        
+                <div class="p-anchor" id="p-dropdown-nav"></div>
+
+                <div class="outset-box box-flex">
+                    <h2>dropdown-nav</h2>
+                    <p>
+This class allows you to create the nav of the same type present on the page. Please note: the nav is drop-down, so it is hidden by default, with exactly 100px of it showing. If you wish to reset that, alter the "translate" property manually.
+                    </p>
+                </div>
+                <div class="outset-box box-flex">
+                    <h2>h2 (dropdown-nav)</h2>
+                    <p>
+Mark the title with h2 tags in the nav to have it appear as a display. The example can be seen in the top-left corner of the current page.
+                    </p>
+                </div>
+                <div class="outset-box box-flex">
+                    <h2>h3 (dropdown-nav)</h2>
+                    <p>
+A simple centered header for topic columns if you have a lot and you want to categorise them.
+                    </p>
+                </div>
+            </div>
+
+
+            <div class="box-flex flex-vert">
+                <div class="box-flex">
+<pre><code class="language-HTML code-display"
+>&lt;header class="sticky-header"&gt;
+    &lt;nav id="header-nav" class="dropdown-nav"&gt;
+
+        &lt;div class="flex-horiz"&gt;
+            &lt;a href="index.html"
+            class="neu-link"&gt;Overview&lt;/a&gt;
+            &lt;a href="appeal.html"
+            class="neu-link"&gt;Appeal&lt;/a&gt;
+            &lt;a href="gallery.html"
+            class="neu-link"&gt;Gallery&lt;/a&gt;
+            &lt;a href="issues.html"
+            class="neu-link"&gt;Problems&lt;/a&gt;
+        &lt;/div&gt;
+
+
+        &lt;br&gt;
+        &lt;hr class="outset-line"&gt;
+        &lt;br&gt;
+
+        &lt;div class="flex-horiz justify-s-between"&gt;
+            &lt;h2&gt;Example Nav&lt;/h2&gt;
+            &lt;div class="neu-button-wrapper"&gt;
+                &lt;input type="checkbox"
+                class="neu-button" id="menu-check"&gt;
+                &lt;i class="fa-solid fa-bars"&gt;&lt;/i&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/nav&gt;
+&lt;/header&gt;
+</code></pre>
+                </div>
+                <div class="outset-box box-flex">
+                    <h2>Example</h2>
+                    <p>
+The example of a dropdown nav can be seen at the top of your screen. The code behind it is too large to fit in an example box, so, if you wish to see it in its entirety, do inspect element. 
+                    </p>
+                </div>
+            </div>
+
+        </div>
+
+        <br>
+        <hr class="outset-line">
+        <br>
+
+
+        <div class="p-anchor" id="p-neu-link"></div>
+
+        <div class="flex-horiz" style="align-items: center;">
+        <div class="outset-box box-flex">
+            <h2>neu-link</h2>
+            <p>
+A standalone link that looks like a button.
+            </p>
+        </div>
+        <pre><code class="language-HTML code-display box-flex"
+>&lt;a href="https://en.wikipedia.org/wiki/Potato"
+class="neu-link"&gt;
+    A Random Link
+&lt;/a&gt;
+</code></pre>
+        <a href="https://en.wikipedia.org/wiki/Potato" class="neu-link">
+            A Random Link
+        </a>
+        </div>
+
+        <br><hr style="border-color: var(--highlight);"><br>
+
+        <div class="p-anchor" id="p-text-link"></div>
+
+        <div class="flex-horiz" style="align-items: center;">
+            <div class="outset-box box-flex">
+                <h2>text-link</h2>
+                <p>
+An <a href="https://en.wikipedia.org/wiki/Potato" class="text-link">underlined link</a> that can be placed within a body of text.
+                </p>
+            </div>
+            <pre><code class="language-HTML code-display box-flex"
+>&lt;p&gt;
+    An &lt;a href="https://en.wikipedia.org/wiki/Potato"
+    class="text-link"&gt;underlined link&lt;/a&gt;
+    that can be placed within a body of text.
+&lt;/p&gt;
+</code></pre>
+        </div>
+
+        <br><hr style="border-color: var(--highlight);"><br>
+
+        <div class="p-anchor" id="p-p-anchor"></div>
+
+        <div class="flex-horiz" style="align-items: center;">
+        <div class="p-anchor" id="anchor-1"></div>
+        <div class="outset-box box-flex" id="anchor-2">
+            <h2>p-anchor</h2>
+            <p>
+This should be an empty divb placed right before a paragraph you want to link to. By default, anchor links move to the paragraph being at the top of the page, which is siometimes obscured - in this case, by the nav bar. This anchor is offset by 200px, placing the following paragraph roughly in the middle of the viewport.
+            </p>
+        </div>
+        <div class="flex-vert box-flex" style="gap:0;">
+        <pre><code class="language-HTML code-display box-flex"
+>&lt;div class="p-anchor" id="example-anchor"&gt;&lt;/div&gt;
+&lt;p&gt;
+    Some text
+&lt;/p&gt;
+</code></pre>
+        <div class="flex-horiz box-flex">
+            <a href="#anchor-1" class="neu-link">
+                With anchor
+            </a>
+            <a href="#anchor-2" class="neu-link">
+                Without anchor
+            </a>
+        </div>
+        </div>
+        </div>
+
+        <br>
+        <hr class="outset-line">
+        <br>
+
+
+        <div class="p-anchor" id="p-flexbox"></div>
+
+        <div class="flex-horiz">
+        <div class="outset-box box-flex" style="max-width: 600px;">
+            <h2>Flexbox subclasses</h2>
+            <p>
+The vast majority of this project, as well as most of modern web deign, relies on flexbox layout to create a responsive yet versatile design. At the beginning of the project, it was obvious that including style parameters into every second div would create a huge mess, so a few flexbox helper classes were added.
+            </p>
+        </div>
+        </div>
+
+        <div class="flex-horiz">
+        <div class="outset-box box-flex">
+            <h2>flex-horiz</h2>
+            <p>
+Creates a horizontal layout for its children. By default, it has a gap of 30px and it can wrap to multiple lines if the window size is too narrow.
+            </p>
+        </div>
+        <div class="outset-box box-flex">
+            <h2>flex-vert</h2>
+            <p>
+This one is for a vertical layout. It is the default layout of a page, so this class is used less often. Most common use is inside of a flex-horiz, to create two columns of elements side-by-side.
+            </p>
+        </div>
+        </div>
+
+        <div class="flex-horiz">
+        <div class="outset-box box-flex">
+            <h2>box-flex</h2>
+            <p>
+Any child of a flexbox parent should have this class, unless it has a static size. Box-flex controls the scaling of the element. For example, a paragraph with no size limitations will by default stretch the entire width of the screen, and even flex-horiz won't allow to put two paragraphs side-by-side.
+            </p>
+        </div>
+        </div>
+
+        <div class="flex-horiz">
+        <div class="outset-box box-flex" style="max-width: 600px;">
+            <h2>justify-content extensions</h2>
+            <p>
+Flexbox layout can be used to create any part of your website. However, for that it needs a few parameters, and again, writing them in the style property of every tag quickly becomes impossible. Because of that, a few flexbox subclasses were added to cover the most useful flexbox parameter - justify-content. They can be added alongside other classes of a tag. Here are all of the current versions:</p>
+<ul>
+    <li>justify-start = justify-content: flex-start</li>
+    <li>justify-end = justify-content: flex-end</li>
+    <li>justify-s-between = justify-content: space-between</li>
+    <li>justify-center = justify-content: center</li>
+</ul>
+        </div>
+        </div>
+
+        
+
+        <div class="double-element" style="margin: 50px 100px; gap: 30px">
+            <a href="issues.html" class="neu-link">
+                <i class="fa-solid fa-arrow-left"></i>
+                Biggest Problems
+            </a>
+            <a href="feedback.html" class="neu-link">
+                Share Your Thoughts
+                <i class="fa-solid fa-arrow-right"></i>
+            </a>
+        </div>
+
+
+        <footer>
+            <div id="fb-root"></div>
+            <script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_GB/sdk.js#xfbml=1&version=v16.0" nonce="VeTOiwJb"></script>
+            <p>Enjoying your experience so far? Share it with others!</p>
+            <div class="flex-horiz"><div class="share-list">
+                <a class="twitter-share-button"
+                href="https://twitter.com/intent/tweet?text=Check%20out%20this%20Neumorphism%20design%20website!"
+                data-size="large">
+                <i class="fa-brands fa-twitter"></i> Tweet</a>
+    
+                <script src="https://platform.linkedin.com/in.js"></script>
+                <script type="IN/Share" data-url="https://www.linkedin.com" data-size="large"></script>
+    
+                
+                <div class="fb-share-button" data-href="https://developers.facebook.com/docs/plugins/" data-layout="button"><a target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fdevelopers.facebook.com%2Fdocs%2Fplugins%2F&amp;src=sdkpreparse" class="fb-xfbml-parse-ignore">Share</a></div>
+            </div></div>
+            <p>Copyright Boris Filin 2023</p>
+        </footer>
+
+        <script src="Scripts/DropDownNav.js"></script>
+        <script src="Scripts/Accessibility.js"></script>
+    </body>
+</html>

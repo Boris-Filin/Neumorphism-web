@@ -1,5 +1,7 @@
-a.neu-link:link {
+/* This is similar to what I did with buttons,
+except the border radius is way less. */
 
+a.neu-link:link {
     background-color: var(--bg-to);
 
     border: 3px var(--bg) solid;
@@ -8,21 +10,31 @@ a.neu-link:link {
     box-shadow: 3px 3px 5px var(--shadow),
         -3px -3px 5px var(--highlight);
     padding: 10px;
+
+    /* box-sizing: border-box; */
+
+    /* margin: 30px; */
     
     color: var(--text-col);
 
+    /* Remove the underline */
     text-decoration: none;
-    font-size: 20px;
+    font-size: large;
+
+    text-align: center;
+
+    height: 1em;
 }
 
+/* Visited link */
 a.neu-link:visited{
     background-color: var(--bg);
-    color: rgb(160, 160, 160);
+    color: var(--text-col);
     border: 3px var(--bg) solid;
-
+    margin: 30px;
 }
 
-
+/* Link on click */
 a.neu-link:active{
     border: 3px var(--bg) solid;
 
@@ -33,3 +45,40 @@ a.neu-link:active{
     
     color: black;
 }
+
+/* Link on hover */
+a.neu-link:hover {
+    background-image: linear-gradient(rgb(255,255,255, 0.3) 100%, transparent);
+    /* color: var(--highlight); */
+    /* border-radius: 2px; */
+}
+
+
+/* This is just the styling of any link that is in text,
+like reference links in paragraphs. */
+a.text-link {
+    text-decoration: underline;
+    color: inherit;
+    font-style: italic;
+    white-space: nowrap;
+}
+
+a.text-link:hover {
+    text-decoration: None;
+    color: inherit;
+    background-color: var(--shadow);
+    color: var(--text-col);
+    border-radius: 2px;
+}
+
+/* This is for the anchor tags so that the
+content they are linked does not appear 
+at the top of the page */
+.p-anchor {
+    position: relative;
+    top: -200px;
+}
+
+
+
+/* © Boris Filin 2023 */

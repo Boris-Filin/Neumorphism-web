@@ -1,3 +1,5 @@
+/* Code for hover button.
+For now it can only be found at the bottom of the implementation page. */
 
 .hover-button {
     width: 50px;
@@ -8,6 +10,7 @@
     top: -10px;
 
     background-color: var(--bg);
+    /* A 3D "Pill" effect */
     background-image: radial-gradient(at 20% 20%, var(--highlight) 10px, transparent);
 
     border: 0;
@@ -17,6 +20,7 @@
 
         10px 20px 5px rgb(0, 0, 0, 0.1),
 
+        /* This is to give it depth */
         0 1px 0 var(--bg-tinted),
         0 2px 0 var(--bg-tinted),
         0 3px 0 var(--bg-tinted);
@@ -25,16 +29,19 @@
     justify-content: center;
     align-items: center;
     font-size: 30px;
-}
 
-.hover-button::after{
     color: var(--text-col);
-    font-family: FontAwesome;
-    content: '\f077';    
+    --text-glow: white;
+    --text-shadow: rgb(255, 255, 255, 0.5)
 }
 
+
+/* Whet it is pressed, it is offset down, and the shadow reflects that. */
 .hover-button:active {
-    top: -5px;
+    color: var(--text-glow);
+    text-shadow: 0 0 3px var(--text-shadow);
+
+    top: -5px; 
 
     box-shadow: -3px -3px 5px rgb(0, 0, 0, 0.15) inset,
         3px 3px 5px rgb(255, 255, 255, 0.15) inset,
@@ -46,3 +53,7 @@
         0 3px 0 var(--bg-tinted);
 
 }
+
+
+
+/* © Boris Filin 2023 */

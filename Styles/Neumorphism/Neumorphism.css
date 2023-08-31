@@ -1,48 +1,97 @@
-/* 
-    Planned design sections:
-    - General - html, body, gradient, background color, ligt position
-    - Header text - glowing in a frame
-    - Paragraph text - protruded with gloss
-    - Button (Checkbox)
-    - Floating button - Shadow, border, slight gloss
-    - Link - glowing if clicked, inactive if visited
-    - Input field - inset
-    - Image - Crop in extrusion
- */
+/* This imports all of the other files so that the user
+only needs one line to import the entire style */
  @import url("Values.css");
  @import url("Button.css");
  @import url("Hover-Button.css");
  @import url("Display.css");
  @import url("NeuBox.css");
  @import url("Link.css");
+ @import url("Image.css");
+ @import url("DropDownNav.css");
+ @import url("Footer.css");
+ @import url("AccessibilityPlaque.css");
 
 
+/* Basic setup. Explained in detail on the Implementation page. */
 html {
-    font-family: monospace;
+    font-family: Rockwell;
+    letter-spacing: 0.5px;
+    font-size: medium;
     color: var(--text-col);
     height: 100%;
 }
 
 body{
-    /* background-image: linear-gradient(135deg, var(--bg-from), var(--bg-to)); */
-    background-color: var(--bg);
+    /* Some slight gradient for the body */
+    background-image: linear-gradient(135deg, var(--bg-from), var(--bg-to));
+    /* background-color: var(--bg); */
+    /* Makes it so the gradient doesn't change on scroll.
+    By default it just starts over and there's a visible ugly line. */
     background-attachment: fixed;
     position: relative;
     margin: 0;
+    padding: 0 50px;
+    /* This ensures the gradient spans the entire page even if there's not enough
+    content. Also the footer witll be at the bottom. */
+    min-height: 100%;
+
+    /* text-size-adjust: 100%; 
+    -ms-text-size-adjust: 100%; 
+    -moz-text-size-adjust: 100%; 
+    -webkit-text-size-adjust: 100%; */
 }
 
 
+/* A generic div to center an item */
 .center-item {
     width: 100%;
     display: flex;
     flex-direction: row;
     justify-content: center;
-
 }
 
 
-.inset-box{
-    background-image: linear-gradient(to bottom right, rgb(100, 100, 100, 0.05) , rgb(0, 0, 0, 0.05));
-    border-radius: 10px;
+/* A flex div for horizontal alignment */
+.flex-horiz {
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: row;
+    gap: 30px;
+    flex-wrap: wrap;
 }
 
+
+/* Same for vertical */
+.flex-vert {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    gap: 30px;
+    overflow: visible;
+}
+
+/* Shrinkable box for the above */
+.box-flex {
+    flex: 1 1 100px;
+    min-width: 300px;
+}
+
+/*
+Addition to the above to change the justify-content property.
+Could be done through style=... but implementation
+through classes is cleaner.
+*/
+.justify-start { justify-content: flex-start; }
+.justify-end { justify-content: flex-end; }
+.justify-s-between { justify-content: space-between; }
+.justify-center { justify-content: center; }
+
+
+/* Gives some margin to the page title */
+#header-box {
+    margin: 50px 0;
+}
+
+
+
+/* © Boris Filin 2023 */

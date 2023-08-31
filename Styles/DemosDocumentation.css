@@ -1,0 +1,41 @@
+.demo {
+    text-align: center;
+    background-color: rgb(235, 235, 235);
+    color: rgb(30, 30, 30);
+
+    box-shadow: 3px 3px 5px var(--shadow),
+        -3px -3px 5px var(--highlight),
+        -3px -3px 5px var(--highlight),
+        3px 3px 5px rgb(0, 0, 0, 0.5) inset,
+        -3px -3px 5px white inset;
+
+    font-family: monospace;
+    font-size: large;
+    letter-spacing: normal;
+
+}
+
+#demo-btn-1, #demo-btn-2, #demo-display-1, #demo-display-2 {
+    --bg-from: white;
+    --bg: rgb(235, 235, 235);
+    --highlight: white;
+    --shadow: rgb(0, 0, 0, 0.3);
+    --bg-tinted: grey;
+}
+
+#demo-btn-1 + i {
+    --text-glow:   rgb(255, 50, 50);
+    --text-shadow: rgb(255, 50, 50);
+}
+
+#demo-btn-2 {
+    --text-col:    grey;
+    --text-glow:   rgb(0, 200, 255);
+    --text-shadow: aqua;
+}
+
+#demo-display-2 {
+    color: #666666;
+    font-weight: bold;
+    font-family: monospace;
+}

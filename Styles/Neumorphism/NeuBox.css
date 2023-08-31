@@ -1,37 +1,63 @@
+
+/* This is the sstyling for most of the 3D elements on the page */
+/* The explanation of each rule can be gound on th eimplementation page */
 .outset-box {
+    font-size: inherit;
+    /* The background should match the page */
     background-color: var(--bg);
 
+    /* Rounded corners */
     border-radius: 10px;
 
     box-shadow:
+    /* Shadow on bottom-right */
         2px 2px 4px var(--shadow),
+    /* Highlight on top-left */
         -2px -2px 4px var(--highlight),
         -2px -2px 4px var(--highlight);
+    /* There are two, because for very bright
+    pages even a full-white highlight is not enough.
+    You need a double. */
         
-
+    /* Add some padding to the inside so that the elements
+    don't touch the edge */
     padding: 15px;
 
+    /* Add some space around the div.
+    It is more important than usual, because if two outset divs
+    are positioned right next to one another, their shadow and
+    highlights overlap, completely breaking the illusion for the
+    entire page. */
     margin: 10px;
+
+    /* Position relative to allow for absolute elements within the div. */
     position: relative;
 }
 
-/* Accessibility outline for text paragraphs */
-.outset-box::after {
-    border: 2px var(--accessibility) solid;
-    box-shadow: 0 0 5px -1px var(--accessibility),
-        0 0 5px -1px var(--accessibility) inset;
-    border-radius: 5px;
-    position: absolute;
-    top: 5px; right: 5px; bottom: 5px; left: 5px;
-    content: "";
-    pointer-events: none;
-}
 
+/* Create a gradient for some of the boxes. Makes them less flat. */
 .outset-box.glossy {
     background-image: linear-gradient(to bottom right, rgb(255, 255, 255, 0.1) , rgb(0, 0, 0, 0.05));
 }
 
+.outset-box > p {
+    font-size: inherit;
+    margin: 0;
+}
+
+/* This creates a gap between every child of the div,
+but not around them - that is taken care of by the parent padding.
+This particular aproach replaces the "gap" property of flexbox. */
+.outset-box > :not(:first-child) {
+    margin: 10px 0 0 0 ;
+}
+
+
+/* This highlights headings within the div.
+The glow and bg are very similar to Display. */
 .outset-box > h2 {
+    font-family:  monospace;
+
     padding: 10px;
     margin: 0;
     flex-grow: 0;
@@ -41,65 +67,111 @@
     text-shadow: 0 0 3px white;
 
     background-color: var(--bg);
+    /* This is a very weird hack that allows the background to be slightly dimmed
+    while still retaining full color. */
     background-image: linear-gradient(var(--shadow) 100%, black);
 }
 
+/* This is used exclusively for numbered divs on the Implementation page.
+Every h3 makes a circle around the number and places the latter in the middle. */
+.outset-box > h3 {
+    font-family:  monospace;
+    font-weight: 900;
+
+    background-color: var(--bg);
+    background-image: linear-gradient(var(--shadow) 100%, black);
+    border-radius: 50%;
+    width: 2em;
+    height: 2em;
+
+    /* This particular line places the text in the middle verically
+    without the use of flexbox */
+    line-height: 2em;
+
+    text-align: center;
+
+    margin: 0 20px 0 0;
+
+    float: left;
+
+    color: var(--text-col)
+}
+
+
+/* This is used mostly in forms */
 .inset-box {
     background: transparent;
     border: 0;
+    border-radius: 5px;
     font-family: monospace;
     /* padding: 5px; */
     box-shadow:
         3px 3px 5px var(--shadow) inset,
         -3px -3px 5px var(--highlight) inset;
+    color: var(--text-col)
+
 }
 
+/* Told you */
 form > .inset-box {
-    padding: 5px;
+    padding: 10px;
 }
 
+/* This is the main styling for a form.
+I will probably take it into a separate file for the final
+version of the library. */
 form.outset-box {
+    /* Just the regular flex layout. */
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
+    /* This stretches the items to full width of the form */
     align-items: stretch;
     padding: 10px;
+    /* This creates gaps inbetween the form entries */
     gap: 10px;
 }
 
 .outset-box > textarea {
+    /* Flex-grow here tellsthe textarea to take up all of the remaining space
+    on the form */
     flex-grow: 1;
+    /* resize: none stops the textarea from being resizable by the user.
+    It still has the scrollbar. */
     resize: none;
     border-radius: 5px;
-    appearance: none;
 }
 
+
+/* A slight highlight whenever an inset area is selected */
 .inset-box:focus{
     outline: none;
-    background-image: linear-gradient(rgb(255,255,255, 0.1) 100%, black);
+    /* background-image: linear-gradient(rgb(255, 255, 255, 0.5) 100%, black); */
+    background-image: linear-gradient(var(--highlight) 100%, black);
+
 }
 
-.gloss-outer {
-    position: relative;
-    top: -100%;
-    width: 100%;
-    height: 100%;
-}
 
-.gloss {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    border-radius: 10px;
-    background-image: linear-gradient(to bottom right, rgb(255, 255, 255, 0.1) , rgb(0, 0, 0, 0.05));
-}
-
+/* This is some styling for separator lines used everywhere on the website. */
 .outset-line{
-    width: 10px;
-    border-radius: 5px;
+    /* These two properties are the line width or height depending on whether
+    it is vertical or horizontal. */
+    min-width: 4px;
+    min-height: 4px;
+    /* This is weird, but if lines with thickness are resized to 100%,
+    they actually have a slightly bigger width than the screen, so it
+    creates that annoying horizontal scrollbar. Because of that, they
+    have to be capped at just below 100%. */
+    max-width: 98%;
+    border-radius: 2px;
     background-color: transparent;
-    /* background-image: linear-gradient(to right, rgb(255, 255, 255, 0.5) , rgb(0, 0, 0, 0.5)); */
     border:0;
+    /* The values for the shadow had to be tweaked from the outset box
+    because they were too big and were showing on the other side of the line. */
     box-shadow: 1px 1px 2px var(--shadow),
         -1px -1px 2px var(--highlight);
 }
+
+
+
+/* © Boris Filin 2023 */

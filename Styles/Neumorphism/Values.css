@@ -1,13 +1,23 @@
+/* This is the page that stores all of the default
+variables that define the color scheme of the page.
+Any color scheme file overwrites them to change the
+look, but this one in imported by default if no
+scheme is selected. */
+
+
+
 :root {
     /* Light mode */
     --bg-r: 237;
     --bg-g: 235;
     --bg-b: 238;
 
-    /* Dark mode */
-    /* --bg-r: 40;
-    --bg-g: 40;
-    --bg-b: 40; */
+    --shadow: rgb(0, 0, 0, 0.3);
+    --highlight: rgb(255, 255, 255, 1);
+
+    --text-col: rgb(75, 75, 75);
+    --text-highlight: black;
+
     --bg: rgb(var(--bg-r), var(--bg-g), var(--bg-b));
 
     --bg-from: rgb(calc(var(--bg-r) + 10),
@@ -22,17 +32,20 @@
         calc(var(--bg-g) - 20),
         calc(var(--bg-b) - 20));
 
-    /* --accessibility: yellow; */
-    --accessibility: transparent;
+    
+    /* Access mode colors for when it is on.
+    Have to be unique for color scheme. */
+    --access: rgb(0, 0, 255);
+    --access-main: rgb(0, 191, 255);
 
-    /* Light mode */
-    --shadow: rgb(0, 0, 0, 0.3);
-    --highlight: rgb(255, 255, 255, 1);
-
-    /* Dark mode */
-    /* --shadow: rgb(0, 0, 0, 0.7);
-    --highlight: rgb(255, 255, 255, 0.2); */
-
-    --text-col: rgb(75, 75, 75);
-    --text-highlight: black;
+    /* Actual values for the access mode items.
+    They are transparent by default. Having them
+    as variables allows to change them in only one
+    place when the mode is toggled. */
+    /* --access: rgb(0, 0, 255, 0);
+    --access-main: rgb(0, 191, 255, 0); */
 }
+
+
+
+/* © Boris Filin 2023 */

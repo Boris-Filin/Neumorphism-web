@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <!-- title, styles, icon pack link (font awesome) -->
+
+        <title>Neumorphism</title>
+
+        <link rel="stylesheet" href="Styles/Neumorphism/Neumorphism.css">
+        <link rel="stylesheet" href="Styles/PagesStyling.css">
+        <script src="https://kit.fontawesome.com/7b1233a124.js" crossorigin="anonymous"></script>
+
+        <meta charset="UTF-8">
+        <meta name="description" content="Neumorphism design">
+        <meta name="keywords" content="CSS, Neumorphism, Design">
+        <meta name="author" content="Boris Filin">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        
+    </head>
+    <body>
+        <header class="sticky-header">
+            <nav id="header-nav" class="dropdown-nav">
+
+                <div class="flex-horiz">
+                    <div class="flex-vert justify-start">
+                        <h3>Trivia</h3>
+                        <a href="index.html" class="neu-link">Overview</a>
+                        <a href="appeal.html" class="neu-link">Appeal</a>
+                        <a href="gallery.html" class="neu-link">Gallery</a>
+                        <a href="issues.html" class="neu-link">Problems</a>
+                    </div>
+                    <hr style="margin: 0px">
+                    <div class="flex-vert justify-start">
+                        <h3>Code</h3>
+                        <a href="implementation.html" class="neu-link">Implementation</a>
+                        <a href="library.html" class="neu-link">Library</a>
+                        <a href="documentation.html" class="neu-link">Documentation</a>
+                        <a href="reflection.html" class="neu-link">Reflection</a>
+                    </div>
+                    <hr style="margin: 0px">
+                    <!-- <div class="flex-vert justify-start">
+                        <h3>Connections</h3>
+                    </div> -->
+                    <!-- <hr style="margin: 0px"> -->
+                    <div class="flex-vert justify-start">
+                        <h3>Other</h3>
+                        <a href="feedback.html" class="neu-link">Feedback</a>
+                        <a href="sourcelog.html" class="neu-link">Sourcelog</a>
+                        <a href="sitemap.html" class="neu-link">Sitemap</a>
+                    </div>
+                </div>
+
+                <br>
+                <hr class="outset-line">
+                <br>
+
+                <div class="flex-horiz justify-s-between">
+                    <h2>Neumorphism</h2>
+                    <div class="neu-button-wrapper">
+                        <input type="checkbox" class="neu-button" id="menu-check">
+                        <i class="fa-solid fa-bars"></i>
+                    </div>
+                </div>
+            </nav>
+        </header>
+        <div style="height: 120px"></div>
+
+
+        <div class="flex-horiz" style="align-items: center;">
+            <div class="outset-box" id="access-mode">
+                <p>Accessibility Mode:</p>
+                <div class="neu-button-wrapper">
+                    <input type="checkbox" class="neu-button" id="access-check">
+                    <i class="fa-solid fa-check"></i>
+                </div>
+            </div>
+
+            <div class="display" id="header-box">
+                <h2 id="header">Sitemap</h2>
+            </div>
+
+            <div id="access-counterweight"></div>
+        </div>
+
+
+        <!-- Just a nested nav with links to every page, as well as
+        topics within that page using ids. -->
+
+        <div class="center-item">
+            <div class="outset-box">
+                <h2>Here are the links to all of the pages and topics on this site.</h2>
+                <div class="center-item">
+                    <ul>
+                        <li>
+                            <a href="index.html" class="text-link">
+                                <b>Overview</b>
+                            </a>
+                            <ul>
+                                <li><a href="index.html#p-intro" class="text-link">Introduction</a></li>
+                                <li><a href="index.html#p-trivia" class="text-link">Theory</a></li>
+                                <li><a href="index.html#p-technique" class="text-link">Technical Details</a></li>
+                                <li><a href="index.html#p-issues" class="text-link">Problems</a></li>
+                                <li><a href="index.html#p-conclusion" class="text-link">Conclusion</a></li>
+                            </ul>
+                        </li>
+
+
+                        <li>
+                            <a href="implementation.html" class="text-link">
+                                <b>Implementation</b>
+                            </a>
+                            <ul>
+                                <li><a href="implementation.html#p-main" class="text-link">Setup</a></li>
+                                <li><a href="implementation.html#p-elements" class="text-link">Standard div</a></li>
+                                <li><a href="implementation.html#p-inset" class="text-link">Inset elements and Buttons</a></li>
+                                <li><a href="implementation.html#p-fin" class="text-link">Conclusion</a></li>
+                            </ul>
+                        </li>
+
+
+                        <li>
+                            <a href="issues.html" class="text-link">
+                                <b>Problems</b>
+                            </a>
+                            <ul>
+                                <li><a href="issues.html#p-access" class="text-link">Accessibility</a></li>
+                                <li><a href="issues.html#p-complication" class="text-link">Convoluted code</a></li>
+                                <li><a href="issues.html#p-fin" class="text-link">Conclusion</a></li>
+                            </ul>
+                        </li>
+
+
+                        <li>
+                            <a href="library.html" class="text-link">
+                                <b>CSS library download</b>
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="feedback.html" class="text-link">
+                                <b>Feedback form</b>
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="sourcelog.html" class="text-link">
+                                <b>Sourcelog</b>
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="sitemap.html" class="text-link">
+                                <b>Sitemap (This page)</b>
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="appeal.html" class="text-link">
+                                <b>Personal Appeal</b>
+                            </a>
+                            <ul>
+                                <li><a href="appeal.html#p-visual" class="text-link">Visual</a></li>
+                                <li><a href="appeal.html#p-audio" class="text-link">Audio</a></li>
+                                <li><a href="appeal.html#p-reading" class="text-link">Reading</a></li>
+                                <li><a href="appeal.html#p-kinaesthetic" class="text-link">Kinaesthetic</a></li>
+                            </ul>
+                        </li>
+
+                        <li>
+                            <a href="gallery.html" class="text-link">
+                                <b>Gallery</b>
+                            </a>
+                        </li>
+                        <li><a href="documentation.html" class="text-link"><b>Documentation</b></a></li>
+                        <li><a href="reflection.html" class="text-link"><b>Reflection</b></a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="double-element" style="margin: 50px 100px; gap: 30px">
+            <a href="sourcelog.html" class="neu-link">
+                <i class="fa-solid fa-arrow-left"></i>
+                Sourcelog
+            </a>
+        </div>
+        
+
+        <footer>
+            <div id="fb-root"></div>
+            <script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_GB/sdk.js#xfbml=1&version=v16.0" nonce="VeTOiwJb"></script>
+            <p>Enjoying your experience so far? Share it with others!</p>
+            <div class="flex-horiz"><div class="share-list">
+                <a class="twitter-share-button"
+                href="https://twitter.com/intent/tweet?text=Check%20out%20this%20Neumorphism%20design%20website!"
+                data-size="large">
+                <i class="fa-brands fa-twitter"></i> Tweet</a>
+    
+                <script src="https://platform.linkedin.com/in.js"></script>
+                <script type="IN/Share" data-url="https://www.linkedin.com" data-size="large"></script>
+    
+                
+                <div class="fb-share-button" data-href="https://developers.facebook.com/docs/plugins/" data-layout="button"><a target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fdevelopers.facebook.com%2Fdocs%2Fplugins%2F&amp;src=sdkpreparse" class="fb-xfbml-parse-ignore">Share</a></div>
+            </div></div>
+            <p>Copyright Boris Filin 2023</p>
+        </footer>
+
+        <script src="Scripts/DropDownNav.js"></script>
+        <script src="Scripts/Accessibility.js"></script>
+    </body>
+</html>
